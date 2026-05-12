@@ -2,6 +2,8 @@
 
 import { useEffect, useState } from "react";
 import { motion, AnimatePresence, useScroll, useTransform } from "framer-motion";
+import Link from "next/link";
+import { ArrowRight, Play } from "lucide-react";
 
 const slides = [
   {
@@ -24,6 +26,13 @@ const slides = [
       "Building predictive systems that shift healthcare from reactive to proactive care.",
     image:
       "https://cdn.shopify.com/s/files/1/0636/5226/6115/files/preventiveHealthcare.jpg?v=1777980355",
+  },
+  {
+    title: "LifeScience",
+    subtitle:
+      "Next-gen solutions for drug development and clinical trials.",
+    image:
+      "https://cdn.shopify.com/s/files/1/0636/5226/6115/files/bio.png?v=1777980136",
   },
 ];
 
@@ -98,6 +107,9 @@ function ChevronRightIcon({ className = "" }) {
 
 export default function HeroSection() {
   const [activeSlide, setActiveSlide] = useState(0);
+  const [typedText, setTypedText] = useState("");
+  const [isTyping, setIsTyping] = useState(true);
+
 
   const { scrollY } = useScroll();
   const scale = useTransform(scrollY, [0, 600], [1, 1.08]);
@@ -105,10 +117,30 @@ export default function HeroSection() {
   useEffect(() => {
     const interval = setInterval(() => {
       setActiveSlide((prev) => (prev + 1) % slides.length);
+      setTypedText("");
+      setIsTyping(true);
     }, 5000);
 
     return () => clearInterval(interval);
   }, []);
+
+  useEffect(() => {
+    if (isTyping) {
+      const text = slides[activeSlide].title;
+      let i = 0;
+      const typingInterval = setInterval(() => {
+        if (i <= text.length) {
+          setTypedText(text.slice(0, i));
+          i++;
+        } else {
+          setIsTyping(false);
+          clearInterval(typingInterval);
+        }
+      }, 45);
+
+      return () => clearInterval(typingInterval);
+    }
+  }, [activeSlide, isTyping]);
 
   const nextSlide = () => {
     setActiveSlide((prev) => (prev + 1) % slides.length);
@@ -130,29 +162,75 @@ export default function HeroSection() {
 
         {/* Main Hero */}
         <div className="relative flex-1 ">
-          
 
-            {/* Background Image */}
-            <AnimatePresence>
-              <motion.img
-                key={slides[activeSlide].image}
-                src={slides[activeSlide].image}
-                alt={slides[activeSlide].title}
-                style={{ scale }}
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                exit={{ opacity: 0 }}
-                transition={{ duration: 1.2, ease: "easeInOut" }}
-                className="absolute inset-0 h-full w-full object-cover"
+
+          {/* Background Image */}
+          <AnimatePresence>
+            <motion.img
+              key={slides[activeSlide].image}
+              src={slides[activeSlide].image}
+              alt={slides[activeSlide].title}
+              style={{ scale }}
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 1.2, ease: "easeInOut" }}
+              className="absolute inset-0 h-full w-full object-cover"
+            />
+          </AnimatePresence>
+
+          {/* Gradient Overlay */}
+          <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/10 to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-l from-transparent via-transparent to-white/10" />
+
+          <div className="relative z-10 h-full flex items-center">
+            <div className="max-w-7xl mx-auto px-4 py-73 sm:px-6 w-full">
+              <div className="max-w-3xl text-white">
+
+                <h1 className="h-16 font-display text-3xl font-light sm:text-4xl md:text-7xl md:font-black leading-tight mb-4 sm:mb-6">
+                  {typedText}
+                  {/* <span className="cursor"></span> */}
+                </h1>
+                <p className="text-base sm:text-lg md:text-2xl text-white/85 max-w-2xl mb-6 sm:mb-8 leading-relaxed">
+                  {slides[activeSlide].subtitle}
+                </p>
+                <div className="flex flex-col sm:flex-row flex-wrap gap-3">
+                  <Link
+                    href="#programs"
+                    className="bg-primary text-white hover:bg-primary/90 font-semibold px-6 sm:px-7 py-3 sm:py-3.5 rounded-full transition inline-flex items-center justify-center gap-2 text-sm sm:text-base"
+                  >
+                    Innovation Fund <ArrowRight className="w-4 h-4" />
+                  </Link>
+                  <Link
+                    href="#demo"
+                    className="border border-white/30 hover:bg-white/10 text-white font-semibold px-6 sm:px-7 py-3 sm:py-3.5 rounded-full transition inline-flex items-center justify-center gap-2 text-sm sm:text-base"
+                  >
+                    <Play className="w-4 h-4" /> About Us
+                  </Link>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="absolute bottom-6 sm:bottom-8 left-1/2 -translate-x-1/2 z-10 flex gap-2">
+            {slides.map((_, index) => (
+              <button
+                key={index}
+                onClick={() => {
+                  setActiveSlide(index);
+                  setTypedText("");
+                  setIsTyping(true);
+                }}
+                className={`w-8 h-1 rounded-full transition ${index === activeSlide ? "bg-white" : "bg-white/40"
+                  }`}
+                aria-label={`Go to slide ${index + 1}`}
               />
-            </AnimatePresence>
+            ))}
+          </div>
 
-            {/* Gradient Overlay */}
-            <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/10 to-transparent" />
-            <div className="absolute inset-0 bg-gradient-to-l from-transparent via-transparent to-white/10" />
 
-            {/* Floating Card */}
-            <motion.div
+          {/* Floating Card */}
+          {/* <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
@@ -176,10 +254,10 @@ export default function HeroSection() {
                 <div className="hidden h-14 w-14 items-center justify-center rounded-2xl bg-white text-black md:flex">
                   <ArrowRightIcon className="h-5 w-5" />
                 </div>
-              </div>
+              </div> */}
 
-              {/* Slider Controls */}
-              <div className="mt-8 flex items-center justify-between">
+          {/* Slider Controls */}
+          {/* <div className="mt-8 flex items-center justify-between">
                 <div className="flex items-center gap-3">
                   {slides.map((_, index) => (
                     <button
@@ -213,10 +291,10 @@ export default function HeroSection() {
                   </button>
                 </div>
               </div>
-            </motion.div>
-          </div>
+            </motion.div> */}
         </div>
-      
+      </div>
+
     </section>
   );
 }
