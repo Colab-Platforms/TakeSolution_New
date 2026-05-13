@@ -78,7 +78,7 @@ export default function VisionSectionRevamp() {
               </span>
             </div>
 
-            <h1 className="text-[54px] md:text-[92px] leading-[0.92] tracking-[-6px] font-semibold max-w-5xl">
+            <h1 className="text-[40px] sm:text-[54px] md:text-[92px] leading-[0.95] md:leading-[0.92] tracking-[-2px] md:tracking-[-6px] font-semibold max-w-5xl">
               Creating
               <span className="italic font-light text-black/30">
                 {" "}
@@ -99,7 +99,7 @@ export default function VisionSectionRevamp() {
         </div>
 
         {/* Bento Editorial Layout */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 auto-rows-[220px]">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 auto-rows-auto lg:auto-rows-[220px]">
           {visionData.map((item, index) => {
             const isActive = active === item.id;
 
@@ -159,7 +159,7 @@ export default function VisionSectionRevamp() {
                         </span>
                       </div>
 
-                      <h3 className="text-3xl md:text-5xl font-semibold tracking-[-3px] leading-[0.95] max-w-xl">
+                      <h3 className="text-2xl sm:text-3xl md:text-5xl font-semibold tracking-[-1px] md:tracking-[-3px] leading-[0.95] max-w-xl">
                         {item.title}
                       </h3>
                     </div>

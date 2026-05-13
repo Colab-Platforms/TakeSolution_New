@@ -11,7 +11,7 @@ const AboutContent = () => {
           <div className="inline-block px-4 py-1.5 bg-primary/10 text-primary rounded-full text-sm font-medium tracking-wide">
             ESTABLISHED 2001
           </div>
-          <h1 className="text-6xl md:text-7xl font-serif tracking-tight text-foreground leading-[1.1]">
+          <h1 className="text-4xl sm:text-6xl md:text-7xl font-serif tracking-tight text-foreground leading-[1.1]">
             Pioneering <br />
             <span className="text-primary italic">Life Sciences</span> <br />
             For A Better Future
@@ -32,7 +32,7 @@ const AboutContent = () => {
 
         <div className="relative group">
           <div className="absolute -inset-4 bg-gradient-to-tr from-primary/20 to-transparent rounded-[40px] blur-2xl opacity-50 group-hover:opacity-75 transition-opacity" />
-          <div className="relative bg-foreground text-background p-12 rounded-[40px] shadow-2xl overflow-hidden min-h-[400px] flex flex-col justify-end">
+          <div className="relative bg-foreground text-background p-8 md:p-12 rounded-[40px] shadow-2xl overflow-hidden min-h-[400px] flex flex-col justify-end">
             <div className="absolute top-0 right-0 p-12 opacity-10 group-hover:scale-110 transition-transform duration-700">
               <Globe size={240} />
             </div>
@@ -102,7 +102,7 @@ const AboutContent = () => {
       {/* Core Values / Why Us */}
       <div className="space-y-12">
         <div className="text-center max-w-2xl mx-auto space-y-4">
-          <h2 className="text-5xl font-serif italic">Why Choose TAKE?</h2>
+          <h2 className="text-4xl sm:text-5xl font-serif italic">Why Choose TAKE?</h2>
           <p className="text-muted-foreground">Our foundation is built on three decades of clinical expertise and technological foresight.</p>
         </div>
 

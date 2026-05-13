@@ -49,7 +49,7 @@ export default function ProjectsRevamp() {
               </span>
             </div>
 
-            <h2 className="text-5xl md:text-7xl font-bold leading-[0.95] tracking-[-3px]">
+            <h2 className="text-4xl sm:text-5xl md:text-7xl font-bold leading-[0.95] tracking-[-3px]">
               Future-ready
               <span className="block text-white/30 italic font-light">
                 healthcare experiences.
@@ -58,7 +58,7 @@ export default function ProjectsRevamp() {
           </div>
 
           <div className="max-w-md pt-4">
-            <p className="text-lg leading-9 text-white/60">
+            <p className="text-lg leading-relaxed md:leading-9 text-white/60">
               We merge cinematic design, intelligent systems, and immersive
               interactions to build healthcare products that feel decades ahead.
             </p>
@@ -76,7 +76,7 @@ export default function ProjectsRevamp() {
                   : 'lg:ml-24 lg:mr-0'
               }`}
             >
-              <div className="grid lg:grid-cols-[1.2fr_0.8fr] min-h-[650px]">
+              <div className="grid lg:grid-cols-[1.2fr_0.8fr] min-h-[500px] lg:min-h-[650px]">
                 {/* Image */}
                 <div className="relative overflow-hidden">
                   <img
@@ -93,36 +93,36 @@ export default function ProjectsRevamp() {
                 </div>
 
                 {/* Content */}
-                <div className="relative flex flex-col justify-between p-8 md:p-14">
+                <div className="relative flex flex-col justify-between px-6 py-8 md:p-14">
                   <div className="flex items-center justify-between mb-10">
                     <div className="px-5 py-2 rounded-full border border-white/10 bg-white/5 text-xs uppercase tracking-[3px] text-white/70">
                       {project.category}
                     </div>
 
-                    <span className="text-white/30 text-sm tracking-[3px]">
+                    <span className="text-white/30 text-sm tracking-[2px] md:tracking-[3px] shrink-0">
                       {project.year}
                     </span>
                   </div>
 
                   <div>
-                    <h3 className="text-4xl md:text-6xl font-bold leading-[1] tracking-[-2px] mb-8 group-hover:text-cyan-300 transition-colors duration-500">
+                    <h3 className="text-3xl sm:text-4xl md:text-6xl font-bold leading-[1] tracking-[-2px] mb-8 group-hover:text-cyan-300 transition-colors duration-500">
                       {project.title}
                     </h3>
 
-                    <p className="text-white/60 text-lg leading-9 max-w-lg">
+                    <p className="text-white/60 text-lg leading-relaxed md:leading-9 max-w-lg">
                       {project.description}
                     </p>
                   </div>
 
                   {/* Footer */}
                   <div className="mt-16 flex items-center justify-between border-t border-white/10 pt-8">
-                    <div className="flex gap-10 text-sm text-white/40 uppercase tracking-[2px]">
+                    <div className="flex flex-wrap gap-4 md:gap-10 text-[10px] md:text-sm text-white/40 uppercase tracking-[2px]">
                       <span>Innovation</span>
                       <span>Human-Centered</span>
                     </div>
 
                     {/* Custom Arrow Button */}
-                    <button className="group/button w-20 h-20 rounded-full border border-white/10 bg-white/5 backdrop-blur-xl flex items-center justify-center hover:bg-cyan-400 transition-all duration-500 hover:rotate-45">
+                    <button className="group/button w-14 h-14 md:w-20 md:h-20 shrink-0 rounded-full border border-white/10 bg-white/5 backdrop-blur-xl flex items-center justify-center hover:bg-cyan-400 transition-all duration-500 hover:rotate-45">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
                         viewBox="0 0 24 24"

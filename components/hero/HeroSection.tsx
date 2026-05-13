@@ -30,7 +30,7 @@ const slides = [
   {
     title: "LifeScience",
     subtitle:
-      "Next-gen solutions for drug development and clinical trials.",
+      "Next-gen solutions for drug development and clinical trials made easy with us.",
     image:
       "https://cdn.shopify.com/s/files/1/0636/5226/6115/files/bio.png?v=1777980136",
   },
@@ -184,12 +184,11 @@ export default function HeroSection() {
           <div className="absolute inset-0 bg-gradient-to-l from-transparent via-transparent to-white/10" />
 
           <div className="relative z-10 h-full flex items-center">
-            <div className="max-w-7xl mx-auto px-4 py-73 sm:px-6 w-full">
+            <div className="max-w-7xl mx-auto px-4 py-20 sm:py-32 sm:px-6 w-full">
               <div className="max-w-3xl text-white">
 
-                <h1 className="h-16 font-display text-3xl font-light sm:text-4xl md:text-7xl md:font-black leading-tight mb-4 sm:mb-6">
+                <h1 className="    h-16 font-display text-3xl font-light sm:text-4xl md:text-7xl md:font-black leading-tight mb-4 sm:mb-6">
                   {typedText}
-                  {/* <span className="cursor"></span> */}
                 </h1>
                 <p className="text-base sm:text-lg md:text-2xl text-white/85 max-w-2xl mb-6 sm:mb-8 leading-relaxed">
                   {slides[activeSlide].subtitle}

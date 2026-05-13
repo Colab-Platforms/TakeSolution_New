@@ -16,7 +16,7 @@ const FeaturedCarousel = () => {
 
     return (
         <section className="w-full px-4 md:px-10 py-10 md:py-20 bg-[#f8f8f4]"> 
-            <div className="max-w-[1400px] mx-auto h-[700px] md:h-[550px] flex flex-col md:flex-row gap-3 md:gap-5 overflow-hidden">
+            <div className="max-w-[1400px] mx-auto h-[500px] md:h-[550px] flex flex-col md:flex-row gap-3 md:gap-5 overflow-hidden">
                 {slides.map((slide, index) => {
                     const isActive = activeIndex === index;
 
@@ -65,9 +65,9 @@ const FeaturedCarousel = () => {
                                 transition-all duration-500 transform
                                 ${isActive ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}
                             `}>
-                                <h3 className="text-2xl md:text-5xl font-light leading-tight max-w-xs">
+                                <h3 className="text-xl sm:text-2xl md:text-5xl font-light leading-tight max-w-xs">
                                     {slide.title.split(' ').map((word, i) => (
-                                        <span key={i} className="block">{word}</span>
+                                        <span key={i} className="md:block inline-block mr-1">{word}</span>
                                     ))}
                                 </h3>
                             </div>

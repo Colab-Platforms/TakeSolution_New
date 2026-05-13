@@ -10,7 +10,7 @@ const InnovationFundContent = () => {
         <div className="inline-block px-4 py-1.5 bg-primary/10 text-primary rounded-full text-sm font-medium tracking-wide">
           $50M STRATEGIC CAPITAL
         </div>
-        <h1 className="text-6xl md:text-7xl font-serif tracking-tight text-foreground leading-[1.1]">
+        <h1 className="text-4xl sm:text-6xl md:text-7xl font-serif tracking-tight text-foreground leading-[1.1]">
           Investing In The <br />
           <span className="text-primary italic">Next Frontier</span>
         </h1>
@@ -48,8 +48,8 @@ const InnovationFundContent = () => {
       </div>
 
       {/* Form Section */}
-      <div className="grid lg:grid-cols-2 gap-16 items-start bg-card rounded-[48px] border border-border overflow-hidden shadow-2xl">
-        <div className="p-12 lg:p-16 space-y-8 bg-foreground text-background h-full">
+      <div className="grid lg:grid-cols-2 gap-8 lg:gap-16 items-start bg-card rounded-[48px] border border-border overflow-hidden shadow-2xl">
+        <div className="p-8 lg:p-16 space-y-8 bg-foreground text-background h-full">
           <h2 className="text-4xl md:text-5xl font-serif italic leading-tight">
             Apply For <br />Funding
           </h2>
@@ -82,7 +82,7 @@ const InnovationFundContent = () => {
           </div>
         </div>
 
-        <div className="p-12 lg:p-16">
+        <div className="p-8 lg:p-16">
           <form className="space-y-6" onSubmit={(e) => e.preventDefault()}>
             <div className="grid sm:grid-cols-2 gap-6">
               <div className="space-y-2">
