@@ -125,7 +125,7 @@ export default function Navbar() {
                   key={l.href}
                   href={l.href}
                   onClick={() => setIsOpen(false)}
-                  className="text-2xl font-serif text-foreground hover:text-primary transition-colors"
+                  className="text-2xl font-medium text-foreground hover:text-primary transition-colors"
                 >
                   {l.label}
                 </a>

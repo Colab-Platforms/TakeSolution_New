@@ -20,6 +20,8 @@ const instrumentSerif = Instrument_Serif({
   subsets: ["latin"],
 });
 
+
+
 export const metadata: Metadata = {
   title: "Take Solution | Excellence in Innovation",
   description: "Advanced solutions for investment and innovation.",

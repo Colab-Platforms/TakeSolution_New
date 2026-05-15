@@ -1,179 +1,190 @@
+
+
+"use client";
+
 export default function ShowcaseSection() {
     return (
-        <section className="w-full py-20 px-4 flex flex-col items-center bg-[#f8f8f4]">
+        <section className="w-full bg-[#f5f5f3] py-24 px-4 overflow-hidden">
 
-            {/* HEADER */}
-            <div className="text-center mb-16">
-                <p className="text-sm tracking-widest text-gray-400 mb-2">FEATURES</p>
+            <div className="max-w-6xl mx-auto">
 
-                <h2 className="text-3xl md:text-4xl font-semibold text-gray-400">
-                    Creating Long Term Value through
-                </h2>
+                {/* HEADER */}
+                <div className="text-center mb-20">
 
-                <h3 className="text-3xl md:text-4xl font-bold text-indigo-900">
-                    Technology & Intelligence
-                </h3>
-            </div>
+                    <p className="text-[11px] tracking-[0.35em] uppercase text-[#2c2f7c] font-semibold mb-3">
+                        Features
+                    </p>
 
-            {/* GRID */}
-            <div className="relative max-w-7xl w-full grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <h2 className="text-4xl md:text-5xl font-extrabold tracking-tight leading-tight text-[#b3b3b3]">
+                        Creating Long Term Value through
+                    </h2>
 
-                {/* CARD 1: LIFE SCIENCES */}
-                <div className="relative bg-[#f8fbff] rounded-[2.5rem] p-8 md:p-10 min-h-[340px] overflow-hidden border border-blue-50/50 group">
-                    {/* Content on top */}
-                    <div className="relative z-10 max-w-[280px] ">
-                        <h3 className="text-xl font-bold text-indigo-950 mb-5 leading-tight">
-                            Life Sciences Domain Expertise
-                        </h3>
-                        <p className="text-gray-500 text-sm max-w-[190px] leading-relaxed">
-                            Deep scientific and clinical research capabilities enabling specialized,
-                            high-impact healthcare solutions.
-                        </p>
-                    </div>
+                    <h3 className="text-4xl md:text-5xl font-black tracking-tight text-[#1f2167] mt-1">
+                        Technology & Intelligence
+                    </h3>
+                </div>
 
-                    {/* Background Image (Scientist) */}
-                    <div className="absolute top-0 right-0 w-full h-full pointer-events-none mix-blend-multiply opacity-40 transition-transform duration-700 group-hover:scale-105">
+                {/* GRID WRAPPER */}
+                <div className="relative grid grid-cols-1 md:grid-cols-2 gap-5">
+
+                    {/* CARD 1 */}
+                    <div className="relative min-h-[340px] rounded-[2.2rem] bg-[#edf1f7] overflow-hidden p-8 md:p-10 group border border-white/70">
+
+                        {/* BG IMAGE */}
                         <img
                             src="https://cdn.shopify.com/s/files/1/0636/5226/6115/files/layer-bg-img.png?v=1777539772"
                             alt=""
-                            className="h-full w-full object-cover object-left"
+                            className="absolute inset-0 h-full w-full object-cover opacity-80 group-hover:scale-105 transition-transform duration-700"
                         />
-                    </div>
 
-                    {/* DNA Helix Element */}
-                    <div className="absolute -top-2 -right-9 w-48 md:w-64 h-48 md:h-64 pointer-events-none transition-all duration-1000 group-hover:scale-110 group-hover:rotate-6">
+                        {/* DNA */}
                         <img
                             src="https://cdn.shopify.com/s/files/1/0636/5226/6115/files/dna-img.png?v=1777540449"
-                            alt="DNA"
-                            className="w-full h-full object-contain"
+                            alt=""
+                            className="absolute right-6 top-4 w-40 md:w-48 object-contain transition-transform duration-700 group-hover:rotate-6 group-hover:scale-105"
                         />
+
+                        {/* CONTENT */}
+                        <div className="relative z-10 max-w-[250px] pt-8">
+
+                            <h3 className="text-2xl font-extrabold leading-tight text-[#1e2167] mb-5">
+                                Life Sciences Domain Expertise
+                            </h3>
+
+                            <p className="text-[#3f3f3f] leading-8 text-[15px]">
+                                Deep scientific and clinical research capabilities enabling specialized, high-impact healthcare solutions.
+                            </p>
+                        </div>
                     </div>
 
-                </div>
+                    {/* CARD 2 */}
+                    <div className="relative min-h-[340px] rounded-[2.2rem] bg-[#edf1f7] overflow-hidden p-8 md:p-10 border border-white/70">
 
-                {/* CARD 2: DATA SCIENCE */}
-                <div className="relative bg-[#f8fbff] rounded-[2.5rem] p-8 md:p-10 min-h-[340px] border border-blue-50 group flex flex-col justify-between overflow-hidden">
+                        {/* TOP CONTENT */}
+                        <div className="flex items-start justify-between gap-6 relative z-10">
 
-                    {/* TEXT */}
-                    <div className="max-w-[260px] z-10">
-                        <h3 className="text-xl font-bold text-indigo-950 mb-4 leading-tight">
-                            Advanced Data Science Platforms
-                        </h3>
-                        <p className="text-gray-500 text-sm leading-relaxed">
-                            Robust digital and AI-driven platforms transforming complex healthcare
-                            data into actionable intelligence.
-                        </p>
-                    </div>
+                            <div className="max-w-[260px] pt-8">
 
-                    {/* GRAPH (REAL POSITION, NOT HACKED) */}
-                    <div className="relative w-full h-24 md:h-28 mt-6">
+                                <h3 className="text-2xl font-extrabold leading-tight text-[#1e2167] mb-5">
+                                    Advanced Data Science Platforms
+                                </h3>
 
-                        {/* GRID LINES */}
-                        <div className="absolute inset-0 flex flex-col justify-between opacity-40">
-                            <div className="border-b border-gray-200 w-full" />
-                            <div className="border-b border-gray-200 w-full" />
-                            <div className="border-b border-gray-200 w-full" />
+                                <p className="text-[#3f3f3f] leading-8 text-[15px]">
+                                    Robust digital and AI-driven platforms transforming complex healthcare data into actionable intelligence.
+                                </p>
+                            </div>
+
+                            {/* FLOATING BOX */}
+                            <div className="bg-white rounded-3xl shadow-xl px-5 py-4 min-w-[140px] border border-[#f1f1f1] mt-2">
+
+                                <p className="text-[14px] font-semibold text-[#222] mb-2">
+                                    AI Detection
+                                </p>
+
+                                <p className="text-[10px] text-[#999] leading-relaxed mb-4">
+                                    High risk detected — adjust dosage
+                                </p>
+
+                                <div className="flex justify-end">
+                                    <img
+                                        src="https://cdn.shopify.com/s/files/1/0636/5226/6115/files/ai_detection.svg?v=1777544604"
+                                        alt=""
+                                        className="w-12 h-12 object-contain"
+                                    />
+                                </div>
+                            </div>
                         </div>
 
-                        {/* GRAPH IMAGE */}
-                        <img
-                            src="https://cdn.shopify.com/s/files/1/0636/5226/6115/files/ai_detection_random_line.svg?v=1777545385"
-                            alt=""
-                            className="relative z-10 w-full h-full object-contain opacity-80"
-                        />
-                    </div>
+                        {/* GRAPH */}
+                        <div className="absolute bottom-0 left-0 w-full px-6 pb-5">
 
-                    {/* FLOATING POPUP */}
-                    <div className="absolute top-4 md:top-6 right-4 md:right-6 w-28 md:w-36 bg-white rounded-2xl shadow-lg p-3 md:p-4 border border-gray-100 z-20 transition-all duration-500 group-hover:-translate-y-1">
+                            {/* GRID */}
+                            <div className="absolute inset-0 flex flex-col justify-between px-6 pb-5 opacity-40 pointer-events-none">
+                                <div className="border-b border-[#d7dbe5]" />
+                                <div className="border-b border-[#d7dbe5]" />
+                                <div className="border-b border-[#d7dbe5]" />
+                            </div>
 
-                        <h4 className="text-[10px] md:text-xs font-semibold text-gray-800 mb-1">
-                            AI Detection
-                        </h4>
-
-                        <p className="text-[8px] md:text-[10px] text-gray-400 leading-tight mb-2 md:mb-3">
-                            High risk detected – <br /> adjust dosage
-                        </p>
-
-                        {/* ICON */}
-                        <div className="flex justify-end">
                             <img
-                                src="https://cdn.shopify.com/s/files/1/0636/5226/6115/files/ai_detection.svg?v=1777544604"
+                                src="https://cdn.shopify.com/s/files/1/0636/5226/6115/files/ai_detection_random_line.svg?v=1777545385"
                                 alt=""
-                                className="w-8 md:w-12 h-8 md:h-12 object-contain"
+                                className="relative z-10 w-full h-28 object-contain"
                             />
                         </div>
                     </div>
 
-                </div>
+                    {/* CARD 3 */}
+                    <div className="relative min-h-[340px] rounded-[2.2rem] bg-[#edf6f8] overflow-hidden p-8 md:p-10 group border border-white/70">
 
-                {/* CARD 3: High-Growth Healthcare Segments */}
-                <div className="relative bg-gray-50 rounded-[2.5rem] p-8 md:p-10 min-h-[340px] overflow-hidden group border border-transparent hover:border-blue-100 transition-all">
-                    <div className="relative z-10 max-w-[280px] mt-8 md:mt-16">
-                        <h3 className="text-xl font-bold text-indigo-950 mb-5 leading-tight">
-                            Focus on High-Growth Healthcare Segments
-                        </h3>
-                        <p className="text-gray-500 text-sm leading-relaxed">
-                            Strategic alignment with rapidly expanding sectors including biotechnology,
-                            clinical research, and preventive healthcare.
-                        </p>
-                    </div>
-
-                    <div className="absolute top-0 right-0 w-full h-full pointer-events-none mix-blend-multiply opacity-40 transition-transform duration-700 group-hover:scale-105">
+                        {/* BG */}
                         <img
                             src="https://cdn.shopify.com/s/files/1/0636/5226/6115/files/card3_bg.png?v=1777547907"
                             alt=""
-                            className="h-full w-full object-cover object-left"
+                            className="absolute inset-0 h-full w-full object-cover opacity-20"
                         />
-                    </div>
 
-                    {/* Atom Image (Floating Foreground) */}
-                    <div className="absolute -top-4 md:-top-6 -right-4 md:-right-6 w-48 md:w-60 h-48 md:h-60 pointer-events-none transition-all duration-1000 group-hover:scale-110 group-hover:rotate-12">
+                        {/* ATOM */}
                         <img
                             src="https://cdn.shopify.com/s/files/1/0636/5226/6115/files/atom.png?v=1777548622"
-                            alt="atom"
-                            className="w-full h-full object-contain"
+                            alt=""
+                            className="absolute right-8 top-6 w-44 object-contain transition-transform duration-700 group-hover:rotate-12 group-hover:scale-105"
                         />
-                    </div>
-                </div>
 
-                {/* CARD 4: Scalable AI-Driven Business Model */}
-                <div className="relative bg-gradient-to-br from-blue-50 to-white rounded-[2.5rem] p-8 md:p-10 min-h-[340px] overflow-hidden group border border-blue-50">
+                        {/* CONTENT */}
+                        <div className="relative z-10 max-w-[280px] pt-20">
 
-                    {/* TEXT (LEFT SIDE) */}
-                    <div className="relative z-10 max-w-[260px] mt-8 md:mt-16">
-                        <h3 className="text-xl font-bold text-indigo-950 mb-4 leading-tight">
-                            Scalable AI-Driven Business Model
-                        </h3>
-                        <p className="text-gray-500 text-sm leading-relaxed">
-                            Flexible, technology-led architecture designed to scale efficiently
-                            across global healthcare ecosystems.
-                        </p>
-                    </div>
+                            <h3 className="text-2xl font-extrabold leading-tight text-[#1e2167] mb-5">
+                                Focus on High-Growth Healthcare Segments
+                            </h3>
 
-                    {/* IMAGE (RIGHT SIDE - BACKGROUND STYLE) */}
-                    <img
-                        src="https://cdn.shopify.com/s/files/1/0636/5226/6115/files/map.png?v=1777547345"
-                        alt=""
-                        className="absolute right-0 top-1/2 -translate-y-1/2 w-[70%] max-w-[420px] opacity-90 pointer-events-none transition-transform duration-700 group-hover:translate-x-2"
-                    />
-
-                </div>
-
-                {/* CENTER CIRCLE */}
-                <div className="hidden md:flex absolute inset-0 items-center justify-center pointer-events-none">
-                    <div className="bg-white w-40 h-40 rounded-full flex items-center justify-center">
-                        <div className="w-26 h-26 bg-gradient-to-r from-[#EBF4FF] to-[#DAEBFF] rounded-full shadow-lg flex items-center justify-center">
-                            <img
-                                src="https://cdn.shopify.com/s/files/1/0636/5226/6115/files/Untitled-1_2.png?v=1772196422"
-                                className="w-12 h-12 object-contain"
-                                alt="logo"
-                            />
+                            <p className="text-[#3f3f3f] leading-8 text-[15px]">
+                                Strategic alignment with rapidly expanding sectors including biotechnology, clinical research, and preventive healthcare.
+                            </p>
                         </div>
                     </div>
 
-                </div>
+                    {/* CARD 4 */}
+                    <div className="relative min-h-[340px] rounded-[2.2rem] bg-[#edf1f7] overflow-hidden p-8 md:p-10 border border-white/70">
 
+                        {/* MAP */}
+                        <img
+                            src="https://cdn.shopify.com/s/files/1/0636/5226/6115/files/map.png?v=1777547345"
+                            alt=""
+                            className="absolute right-0 top-1/2 -translate-y-1/2 w-[65%] opacity-70"
+                        />
+
+                        {/* CONTENT */}
+                        <div className="relative z-10 max-w-[270px] pt-20">
+
+                            <h3 className="text-2xl font-extrabold leading-tight text-[#1e2167] mb-5">
+                                Scalable AI-Driven Business Model
+                            </h3>
+
+                            <p className="text-[#3f3f3f] leading-8 text-[15px]">
+                                Flexible, technology-led architecture designed to scale efficiently across global healthcare ecosystems.
+                            </p>
+                        </div>
+                    </div>
+
+                    {/* CENTER LOGO */}
+                    <div className="hidden md:flex absolute inset-0 items-center justify-center pointer-events-none z-20">
+
+                        <div className="w-44 h-44 rounded-full bg-[#f5f5f3] flex items-center justify-center shadow-[0_0_0_18px_rgba(255,255,255,0.65)]">
+
+                            <div className="w-28 h-28 rounded-full bg-gradient-to-br from-[#dcecff] to-[#c6daf5] flex items-center justify-center shadow-lg">
+
+                                <img
+                                    src="https://cdn.shopify.com/s/files/1/0636/5226/6115/files/Untitled-1_2.png?v=1772196422"
+                                    alt="logo"
+                                    className="w-14 h-14 object-contain"
+                                />
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
     );
 }
+
+
