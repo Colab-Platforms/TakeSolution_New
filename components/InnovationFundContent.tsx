@@ -1,158 +1,238 @@
-"use client"
-import React from 'react'
-import { Send, CheckCircle2, Info, Rocket, BrainCircuit, Microscope } from 'lucide-react'
+"use client";
 
-const InnovationFundContent = () => {
+import React from "react";
+import {
+  ArrowUpRight,
+  BrainCircuit,
+  Check,
+  Microscope,
+  Rocket,
+  Sparkles,
+} from "lucide-react";
+
+const focusAreas = [
+  {
+    title: "AI Discovery",
+    desc: "Machine learning systems accelerating molecule discovery and trial intelligence.",
+    icon: <BrainCircuit className="w-6 h-6" />,
+  },
+  {
+    title: "Precision Medicine",
+    desc: "Genomic-driven therapies and highly personalized treatment ecosystems.",
+    icon: <Microscope className="w-6 h-6" />,
+  },
+  {
+    title: "Digital Health",
+    desc: "Modern patient engagement, decentralized care, and remote monitoring platforms.",
+    icon: <Rocket className="w-6 h-6" />,
+  },
+];
+
+export default function InnovationFundContent() {
   return (
-    <div className="max-w-7xl mx-auto px-6 sm:px-10 py-12 space-y-24">
-      {/* Header Section */}
-      <div className="max-w-3xl space-y-6">
-        <div className="inline-block px-4 py-1.5 bg-primary/10 text-primary rounded-full text-sm font-medium tracking-wide">
-          $50M STRATEGIC CAPITAL
-        </div>
-        <h1 className="text-4xl sm:text-6xl md:text-7xl font-serif tracking-tight text-foreground leading-[1.1]">
-          Investing In The <br />
-          <span className="text-primary italic">Next Frontier</span>
-        </h1>
-        <p className="text-xl text-muted-foreground leading-relaxed font-light">
-          The TAKE Innovation Fund is dedicated to supporting early-stage biotech and health-tech companies that are redefining patient care through data, AI, and novel therapeutics.
-        </p>
+    <section className="relative bg-[white] overflow-hidden py-32">
+      {/* Background */}
+      <div className="absolute inset-0">
+        <div className="absolute top-0 left-[10%] h-full w-px bg-white/5" />
+        <div className="absolute top-0 right-[10%] h-full w-px bg-white/5" />
+
+        <div className="absolute top-[-20%] left-[-10%] w-[700px] h-[700px] bg-[#3B82F6]/10 blur-[160px]" />
+        <div className="absolute bottom-[-20%] right-[-10%] w-[700px] h-[700px] bg-[#8B5CF6]/10 blur-[160px]" />
       </div>
 
-      <div className="grid lg:grid-cols-3 gap-8">
-        {[
-          {
-            icon: <BrainCircuit className="text-primary" size={32} />,
-            title: "AI-Driven Discovery",
-            desc: "Startups leveraging machine learning to accelerate lead identification and clinical trial optimization."
-          },
-          {
-            icon: <Microscope className="text-primary" size={32} />,
-            title: "Precision Medicine",
-            desc: "Novel approaches to personalized therapy based on genomic and phenotypic data sets."
-          },
-          {
-            icon: <Rocket className="text-primary" size={32} />,
-            title: "Digital Health",
-            desc: "Platforms that improve patient engagement, remote monitoring, and decentralized trial execution."
-          }
-        ].map((item, i) => (
-          <div key={i} className="p-8 bg-muted rounded-[32px] border border-border">
-            <div className="mb-6">{item.icon}</div>
-            <h3 className="text-2xl font-serif mb-4 italic">{item.title}</h3>
-            <p className="text-muted-foreground leading-relaxed">
-              {item.desc}
-            </p>
+      <div className="relative z-10 max-w-7xl mx-auto px-6">
+        {/* HERO */}
+        <div className="grid lg:grid-cols-[1.2fr_0.8fr] gap-20 items-end">
+          <div>
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-white/10 bg-white/[0.03] backdrop-blur-xl mb-8">
+              <Sparkles className="w-4 h-4 text-black/80" />
+              <span className="text-[11px] tracking-[0.28em] uppercase text-black/60">
+                $50M Strategic Capital
+              </span>
+            </div>
+
+            <h1 className="text-[3.8rem] md:text-[6.5rem] leading-[0.9] tracking-[-0.08em] font-semibold text-black">
+              Backing The
+              <br />
+              <span className="text-black/30 italic font-light">
+                Future Of
+              </span>
+              <br />
+              Healthcare.
+            </h1>
           </div>
-        ))}
-      </div>
 
-      {/* Form Section */}
-      <div className="grid lg:grid-cols-2 gap-8 lg:gap-16 items-start bg-card rounded-[48px] border border-border overflow-hidden shadow-2xl">
-        <div className="p-8 lg:p-16 space-y-8 bg-foreground text-background h-full">
-          <h2 className="text-4xl md:text-5xl font-serif italic leading-tight">
-            Apply For <br />Funding
-          </h2>
-          <p className="text-lg opacity-70 font-light">
-            Tell us about your breakthrough. Our investment committee reviews applications on a rolling basis and typically responds within 14 business days.
+          <p className="text-lg leading-relaxed text-black/50 max-w-xl">
+            The TAKE Innovation Fund partners with visionary founders building
+            transformative biotech and health-tech companies powered by AI,
+            precision medicine, and next-generation patient infrastructure.
           </p>
-
-          <div className="space-y-6 pt-8">
-            <div className="flex gap-4 items-center">
-              <CheckCircle2 className="text-primary" size={24} />
-              <span className="opacity-90">Strategic mentorship from industry veterans</span>
-            </div>
-            <div className="flex gap-4 items-center">
-              <CheckCircle2 className="text-primary" size={24} />
-              <span className="opacity-90">Access to global clinical trial infrastructure</span>
-            </div>
-            <div className="flex gap-4 items-center">
-              <CheckCircle2 className="text-primary" size={24} />
-              <span className="opacity-90">Capital investment from $500k to $5M</span>
-            </div>
-          </div>
-
-          <div className="p-6 bg-background/5 rounded-3xl border border-background/10 mt-12">
-            <div className="flex gap-4">
-              <Info className="text-primary shrink-0" size={20} />
-              <p className="text-sm opacity-60">
-                Please ensure you have a pitch deck and executive summary ready to be requested if your initial application is shortlisted.
-              </p>
-            </div>
-          </div>
         </div>
 
-        <div className="p-8 lg:p-16">
-          <form className="space-y-6" onSubmit={(e) => e.preventDefault()}>
-            <div className="grid sm:grid-cols-2 gap-6">
-              <div className="space-y-2">
-                <label className="text-sm font-medium opacity-70 ml-1">Full Name</label>
-                <input 
-                  type="text" 
-                  placeholder="John Doe"
-                  className="w-full px-6 py-4 bg-muted rounded-2xl border border-border focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all"
-                />
-              </div>
-              <div className="space-y-2">
-                <label className="text-sm font-medium opacity-70 ml-1">Email Address</label>
-                <input 
-                  type="email" 
-                  placeholder="john@company.com"
-                  className="w-full px-6 py-4 bg-muted rounded-2xl border border-border focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all"
-                />
-              </div>
-            </div>
-
-            <div className="space-y-2">
-              <label className="text-sm font-medium opacity-70 ml-1">Company Name</label>
-              <input 
-                type="text" 
-                placeholder="Biotech Solutions Inc."
-                className="w-full px-6 py-4 bg-muted rounded-2xl border border-border focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all"
-              />
-            </div>
-
-            <div className="space-y-2">
-              <label className="text-sm font-medium opacity-70 ml-1">Company Website</label>
-              <input 
-                type="url" 
-                placeholder="https://..."
-                className="w-full px-6 py-4 bg-muted rounded-2xl border border-border focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all"
-              />
-            </div>
-
-            <div className="space-y-2">
-              <label className="text-sm font-medium opacity-70 ml-1">Focus Area</label>
-              <select className="w-full px-6 py-4 bg-muted rounded-2xl border border-border focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all appearance-none cursor-pointer">
-                <option>AI-Driven Discovery</option>
-                <option>Precision Medicine</option>
-                <option>Digital Health</option>
-                <option>Other Biotech</option>
-              </select>
-            </div>
-
-            <div className="space-y-2">
-              <label className="text-sm font-medium opacity-70 ml-1">Tell us about your innovation</label>
-              <textarea 
-                rows={4}
-                placeholder="Briefly describe your technology and the problem it solves..."
-                className="w-full px-6 py-4 bg-muted rounded-2xl border border-border focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all resize-none"
-              ></textarea>
-            </div>
-
-            <button 
-              type="submit"
-              className="w-full py-4 bg-primary text-primary-foreground rounded-2xl font-bold hover:opacity-90 transition-all flex items-center justify-center gap-2 group"
+        {/* FOCUS AREAS */}
+        <div className="grid md:grid-cols-3 gap-px bg-black/10 mt-28 border border-black/10">
+          {focusAreas.map((item, i) => (
+            <div
+              key={i}
+              className="group bg-[black] p-10 hover:bg-white hover:text-black transition-all duration-500"
             >
-              Submit Application
-              <Send size={18} className="group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
-            </button>
-          </form>
+              <div className="w-14 h-14 rounded-2xl border border-black/10 flex items-center justify-center text-white group-hover:text-black group-hover:border-black/10 transition-all duration-500">
+                {item.icon}
+              </div>
+
+              <h3 className="mt-12 text-3xl tracking-[-0.05em] font-semibold text-white group-hover:text-black transition-colors duration-500">
+                {item.title}
+              </h3>
+
+              <p className="mt-5 text-white/45 leading-relaxed group-hover:text-black/60 transition-colors duration-500">
+                {item.desc}
+              </p>
+
+              <div className="mt-10 flex items-center gap-3 opacity-0 translate-y-4 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500">
+                <span className="text-sm tracking-wide">
+                  Learn More
+                </span>
+
+                <ArrowUpRight className="w-4 h-4" />
+              </div>
+            </div>
+          ))}
+        </div>
+
+        {/* MAIN PANEL */}
+        <div className="mt-28 rounded-[40px] border border-black/10 bg-black/[0.03] backdrop-blur-2xl overflow-hidden">
+          <div className="grid lg:grid-cols-[0.9fr_1.1fr]">
+            {/* LEFT */}
+            <div className="relative p-10 md:p-16 border-b lg:border-b-0 lg:border-r border-black/10">
+              <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_top_left,rgba(255,255,255,0.06),transparent_40%)]" />
+
+              <div className="relative z-10">
+                <span className="text-[11px] tracking-[0.25em] uppercase text-black/40">
+                  Founder Access
+                </span>
+
+                <h2 className="mt-6 text-5xl md:text-6xl leading-[0.95] tracking-[-0.06em] font-semibold text-black">
+                  Apply For
+                  <br />
+                  Funding
+                </h2>
+
+                <p className="mt-8 text-black/50 leading-relaxed text-lg max-w-md">
+                  We partner with ambitious founders solving meaningful healthcare
+                  challenges through deep technology and scientific innovation.
+                </p>
+
+                <div className="mt-14 space-y-6">
+                  {[
+                    "Strategic mentorship from healthcare veterans",
+                    "Access to enterprise clinical infrastructure",
+                    "$500K – $5M capital allocation",
+                  ].map((item, idx) => (
+                    <div
+                      key={idx}
+                      className="flex items-start gap-4"
+                    >
+                      <div className="w-7 h-7 rounded-full bg-white text-black flex items-center justify-center shrink-0 mt-0.5">
+                        <Check className="w-4 h-4" />
+                      </div>
+
+                      <span className="text-black/70 leading-relaxed">
+                        {item}
+                      </span>
+                    </div>
+                  ))}
+                </div>
+
+                <div className="mt-16 p-6 rounded-3xl border border-black/10 bg-white/[0.03]">
+                  <p className="text-sm text-black/40 leading-relaxed">
+                    Shortlisted founders may be requested to submit a detailed
+                    pitch deck, scientific validation documents, and market
+                    strategy overview.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            {/* RIGHT FORM */}
+            <div className="p-10 md:p-16">
+              <form className="space-y-8">
+                <div className="grid md:grid-cols-2 gap-6">
+                  <Input label="Full Name" placeholder="John Doe" />
+                  <Input label="Email Address" placeholder="john@company.com" />
+                </div>
+
+                <Input
+                  label="Company Name"
+                  placeholder="Biotech Solutions Inc."
+                />
+
+                <Input
+                  label="Company Website"
+                  placeholder="https://yourcompany.com"
+                />
+
+                <div>
+                  <label className="text-sm text-black/40 mb-3 block">
+                    Focus Area
+                  </label>
+
+                  <select className="w-full bg-transparent border-b border-black/15 pb-4 text-black placeholder:text-black outline-none focus:border-black transition-colors">
+                    <option className="bg-white text-black">AI Discovery</option>
+                    <option className="bg-white text-black">Precision Medicine</option>
+                    <option className="bg-white text-black">Digital Health</option>
+                    <option className="bg-white text-black">Other</option>
+                  </select>
+                </div>
+
+                <div>
+                  <label className="text-sm text-black/40 mb-3 block">
+                    Your Innovation
+                  </label>
+
+                  <textarea
+                    rows={5}
+                    placeholder="Describe your technology, scientific breakthrough, and impact..."
+                    className="w-full bg-transparent border-b border-black/15 pb-4 text-black placeholder:text-white/25 outline-none resize-none focus:border-black transition-colors"
+                  />
+                </div>
+
+                <button
+                  type="submit"
+                  className="group mt-8 inline-flex items-center gap-4 rounded-full bg-white text-black px-8 py-4 text-sm font-medium hover:pl-10 transition-all duration-300"
+                >
+                  Submit Application
+
+                  <div className="w-8 h-8 rounded-full bg-black text-white flex items-center justify-center">
+                    <ArrowUpRight className="w-4 h-4 group-hover:rotate-45 transition-transform duration-300" />
+                  </div>
+                </button>
+              </form>
+            </div>
+          </div>
         </div>
       </div>
-    </div>
-  )
+    </section>
+  );
 }
 
-export default InnovationFundContent
+function Input({
+  label,
+  placeholder,
+}: {
+  label: string;
+  placeholder: string;
+}) {
+  return (
+    <div>
+      <label className="text-sm text-black/40 mb-3 block">
+        {label}
+      </label>
 
+      <input
+        type="text"
+        placeholder={placeholder}
+        className="w-full bg-transparent border-b border-black/15 pb-4 text-black outline-none focus:border-black transition-colors"
+      />
+    </div>
+  );
+}
