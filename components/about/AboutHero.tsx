@@ -32,13 +32,13 @@ const AboutHero = () => {
         {/* Bento Grid */}
         <div className="grid grid-cols-1 md:grid-cols-12 gap-6 h-auto md:h-[600px]">
           {/* Left Column */}
-          <div className="md:col-span-3 grid grid-rows-1 gap-6">
+          <div className="md:col-span-3 flex flex-col gap-6 h-full">
             <motion.div
               initial={{ opacity: 0, x: -20 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ delay: 0.3 }}
               style={{ scale }}
-              className="relative rounded-[32px] overflow-hidden"
+              className="relative rounded-[32px] overflow-hidden flex-1 min-h-[250px]"
             >
               <img src="/hero-grid-1.png" alt="Lab Research" className="w-full h-full object-cover" />
             </motion.div>
@@ -47,7 +47,7 @@ const AboutHero = () => {
               initial={{ opacity: 0, x: -20 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ delay: 0.4 }}
-              className="bg-[#DCE1EE] p-8 rounded-[32px] flex flex-col justify-center space-y-4"
+              className="bg-[#DCE1EE] p-8 rounded-[32px] flex flex-col justify-center space-y-4 flex-1 min-h-[250px]"
             >
               <h3 className="text-3xl font-display text-[#1A1F3D]">300+<br />Deliveries</h3>
               <p className="text-xs text-muted-foreground leading-relaxed">
@@ -62,7 +62,7 @@ const AboutHero = () => {
             animate={{ opacity: 1, y: 0 }}
             style={{ scale }}
             transition={{ delay: 0.5 }}
-            className="md:col-span-5 relative rounded-[32px] overflow-hidden group"
+            className="md:col-span-5 relative rounded-[32px] overflow-hidden group min-h-[400px] md:min-h-0"
           >
             <img src="/hero-grid-2.png" alt="Scientist" className="w-full h-full object-cover" />
             <div className="absolute inset-0 bg-black/20" />
@@ -78,12 +78,12 @@ const AboutHero = () => {
           </motion.div>
 
           {/* Right Column */}
-          <div className="md:col-span-4 grid grid-rows-1 gap-6">
+          <div className="md:col-span-4 flex flex-col gap-6 h-full">
             <motion.div
               initial={{ opacity: 0, x: 20 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ delay: 0.6 }}
-              className="bg-[#E5DFD9] p-8 rounded-[32px] flex flex-col justify-center space-y-4"
+              className="bg-[#E5DFD9] p-8 rounded-[32px] flex flex-col justify-center space-y-4 flex-1 min-h-[250px]"
             >
               <p className="text-xs text-[#5D5750] leading-relaxed">
                 Our unwavering quality ensures you receive top-purity solutions, always meeting your standards.
@@ -99,7 +99,7 @@ const AboutHero = () => {
               animate={{ opacity: 1, x: 0 }}
               transition={{ delay: 0.7 }}
               style={{ scale }}
-              className="relative rounded-[32px] overflow-hidden"
+              className="relative rounded-[32px] overflow-hidden flex-1 min-h-[250px]"
             >
               <img src="/hero-grid-3.png" alt="Process Equipment" className="w-full h-full object-cover" />
             </motion.div>

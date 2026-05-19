@@ -40,7 +40,7 @@ export default function Vision() {
                 whileInView={{ opacity: 1, scale: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: 0.3, duration: 0.8 }}
-                className="absolute top-50 -left-20 md:-left-20 w-1/3 md:w-1/3 aspect-square rounded-[30px] overflow-hidden border-8 border-white"
+                className="absolute top-[10%] -left-4 md:-left-16 w-1/3 aspect-square rounded-[20px] md:rounded-[30px] overflow-hidden border-4 md:border-8 border-white shadow-2xl"
               >
                 <img
                   src="https://images.unsplash.com/photo-1582719471384-894fbb16e074?auto=format&fit=crop&q=80&w=400"

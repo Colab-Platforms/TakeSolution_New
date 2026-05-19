@@ -40,7 +40,7 @@ export default function Mission() {
                 whileInView={{ opacity: 1, scale: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: 0.3, duration: 0.8 }}
-                className="absolute bottom-50 -right-20 w-1/3 md:w-1/3 aspect-square rounded-[30px] overflow-hidden border-8 border-black shadow-2xl"
+                className="absolute bottom-[10%] -right-4 md:-right-16 w-1/3 aspect-square rounded-[20px] md:rounded-[30px] overflow-hidden border-4 md:border-8 border-black shadow-2xl"
               >
                 <img
                   src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&q=80&w=400"

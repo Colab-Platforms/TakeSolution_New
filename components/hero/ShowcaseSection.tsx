@@ -2,6 +2,43 @@
 
 "use client";
 
+import Image from "next/image";
+
+const features = [
+    {
+        title: "Life Sciences Domain Expertise",
+        description:
+            "Deep scientific and clinical research capabilities enabling specialized healthcare solutions.",
+        image:
+            "https://cdn.shopify.com/s/files/1/0636/5226/6115/files/dna-img.png?v=1777540449",
+        bg: "bg-[#edf1f7]",
+    },
+    {
+        title: "Advanced Data Science Platforms",
+        description:
+            "Robust AI-driven platforms transforming healthcare data into actionable intelligence.",
+        image:
+            "https://cdn.shopify.com/s/files/1/0636/5226/6115/files/ai_detection.svg?v=1777544604",
+        bg: "bg-[#eef4ff]",
+    },
+    {
+        title: "Focus on High-Growth Healthcare Segments",
+        description:
+            "Strategic alignment with rapidly expanding sectors including biotechnology and preventive healthcare.",
+        image:
+            "https://cdn.shopify.com/s/files/1/0636/5226/6115/files/atom.png?v=1777548622",
+        bg: "bg-[#edf6f8]",
+    },
+    {
+        title: "Scalable AI-Driven Business Model",
+        description:
+            "Flexible technology-led architecture designed to scale across global healthcare ecosystems.",
+        image:
+            "https://cdn.shopify.com/s/files/1/0636/5226/6115/files/map.png?v=1777547345",
+        bg: "bg-[#edf1f7]",
+    },
+];
+
 export default function ShowcaseSection() {
     return (
         <section className="w-full bg-[#f5f5f3] py-24 px-4 overflow-hidden">
@@ -9,7 +46,7 @@ export default function ShowcaseSection() {
             <div className="max-w-6xl mx-auto">
 
                 {/* HEADER */}
-                <div className="text-center mb-20">
+                <div className="hidden md:block text-center mb-20">
 
                     <p className="text-[11px] tracking-[0.35em] uppercase text-[#2c2f7c] font-semibold mb-3">
                         Features
@@ -24,8 +61,8 @@ export default function ShowcaseSection() {
                     </h3>
                 </div>
 
-                {/* GRID WRAPPER */}
-                <div className="relative grid grid-cols-1 md:grid-cols-2 gap-5">
+                {/* Desktop */}
+                <div className="hidden md:grid relative grid-cols-2 gap-5">
 
                     {/* CARD 1 */}
                     <div className="relative min-h-[340px] rounded-[2.2rem] bg-[#edf1f7] overflow-hidden p-8 md:p-10 group border border-white/70">
@@ -47,7 +84,7 @@ export default function ShowcaseSection() {
                         {/* CONTENT */}
                         <div className="relative z-10 max-w-[250px] pt-8">
 
-                            <h3 className="text-2xl font-extrabold leading-tight text-[#1e2167] mb-5">
+                            <h3 className="font-display text-3xl font-bold leading-tight text-[#1e2167] mb-5">
                                 Life Sciences Domain Expertise
                             </h3>
 
@@ -65,7 +102,7 @@ export default function ShowcaseSection() {
 
                             <div className="max-w-[260px] pt-8">
 
-                                <h3 className="text-2xl font-extrabold leading-tight text-[#1e2167] mb-5">
+                                <h3 className="font-display text-3xl font-bold leading-tight text-[#1e2167] mb-5">
                                     Advanced Data Science Platforms
                                 </h3>
 
@@ -133,7 +170,7 @@ export default function ShowcaseSection() {
                         {/* CONTENT */}
                         <div className="relative z-10 max-w-[280px] pt-20">
 
-                            <h3 className="text-2xl font-extrabold leading-tight text-[#1e2167] mb-5">
+                            <h3 className="font-display text-3xl font-bold leading-tight text-[#1e2167] mb-5">
                                 Focus on High-Growth Healthcare Segments
                             </h3>
 
@@ -156,7 +193,7 @@ export default function ShowcaseSection() {
                         {/* CONTENT */}
                         <div className="relative z-10 max-w-[270px] pt-20">
 
-                            <h3 className="text-2xl font-extrabold leading-tight text-[#1e2167] mb-5">
+                            <h3 className="font-display text-3xl font-bold leading-tight text-[#1e2167] mb-5">
                                 Scalable AI-Driven Business Model
                             </h3>
 
@@ -180,6 +217,132 @@ export default function ShowcaseSection() {
                                 />
                             </div>
                         </div>
+                    </div>
+                </div>
+
+                {/* MOBILE LAYOUT */}
+                <div className="md:hidden flex flex-col gap-10 mt-10">
+                    {/* HEADER */}
+                    <div className=" text-center mb-14">
+
+                        <p className="text-[11px] tracking-[0.35em] uppercase text-[#2c2f7c] font-semibold mb-4">
+                            Features
+                        </p>
+
+                        <h2 className="
+                    text-[38px]
+                    leading-[0.95]
+                    tracking-[-0.05em]
+                    font-black
+                    text-[#b5b5b5]
+                    ">
+                            Creating Long Term Value
+                        </h2>
+
+                        <h3 className="
+                    text-[38px]
+                    leading-[0.95]
+                    tracking-[-0.05em]
+                    font-black
+                    text-[#1f2167]
+                    mt-1
+                    ">
+                            Through Technology
+                        </h3>
+                    </div>
+
+                    {/* CARDS */}
+                    <div className="space-y-6">
+
+                        {features.map((item, index) => (
+                            <div
+                                key={index}
+                                className={`
+                            relative
+                            overflow-hidden
+                            rounded-[30px]
+                            border border-white/60
+                            ${item.bg}
+                            backdrop-blur-sm
+                            px-7
+                            py-8
+                            shadow-[0_8px_30px_rgba(31,33,103,0.08)]
+                            active:scale-[0.985]
+                            transition-all
+                            duration-300
+                            `}
+                            >
+
+                                {/* SOFT GRADIENT */}
+                                <div className="
+                            absolute
+                            inset-0
+                            bg-gradient-to-br
+                            from-white/40
+                            to-transparent
+                            pointer-events-none
+                            " />
+
+                                {/* IMAGE */}
+                                <div className="relative z-10 mb-8">
+
+                                    <Image
+                                        src={item.image}
+                                        alt={item.title}
+                                        width={80}
+                                        height={80}
+                                        className="
+                                    w-20
+                                    h-20
+                                    object-contain
+                                    opacity-80
+                                    "
+                                    />
+
+                                </div>
+
+                                {/* CONTENT */}
+                                <div className="relative z-10">
+
+                                    <h3 className="
+                                text-[30px]
+                                leading-[1]
+                                tracking-[-0.04em]
+                                font-black
+                                text-[#1f2167]
+                                mb-5
+                                max-w-[95%]
+                                ">
+                                        {item.title}
+                                    </h3>
+
+                                    <p className="
+                                text-[15px]
+                                leading-7
+                                text-[#4a4a4a]
+                                max-w-[95%]
+                                ">
+                                        {item.description}
+                                    </p>
+
+                                </div>
+
+                                {/* SUBTLE DECORATIVE BLUR */}
+                                <div className="
+                            absolute
+                            -right-10
+                            -bottom-10
+                            w-40
+                            h-40
+                            rounded-full
+                            bg-white/20
+                            blur-3xl
+                            pointer-events-none
+                            " />
+
+                            </div>
+                        ))}
+
                     </div>
                 </div>
             </div>

@@ -130,16 +130,7 @@ export const FAQ = () => {
                                 <div className="absolute inset-0 bg-gradient-to-t from-primary/40 to-transparent pointer-events-none" />
                             </div>
 
-                            <div className="p-6 rounded-2xl bg-secondary/50 border border-border/60 flex items-center gap-6 group hover:bg-secondary transition-colors cursor-pointer">
-                                <div className="w-12 h-12 rounded-xl bg-primary flex items-center justify-center text-primary-foreground flex-shrink-0">
-                                    <MessageCircle size={24} />
-                                </div>
-                                <div>
-                                    <h4 className="font-bold text-primary">Still have questions?</h4>
-                                    <p className="text-sm text-muted-foreground">Our team of experts is ready to help you.</p>
-                                </div>
-                                <ArrowRight className="ml-auto text-primary/40 group-hover:text-primary transition-colors" size={20} />
-                            </div>
+                           
                         </motion.div>
                     </div>
 
@@ -171,20 +162,16 @@ export const FAQ = () => {
                                 ))}
                             </div>
                             
-                            <motion.div
-                                initial={{ opacity: 0 }}
-                                whileInView={{ opacity: 1 }}
-                                viewport={{ once: true }}
-                                transition={{ delay: 0.8 }}
-                                className="mt-12 p-8 rounded-3xl border border-dashed border-primary/20 flex flex-col items-center text-center"
-                            >
-                                <p className="text-muted-foreground mb-4">
-                                    Looking for something specific that's not listed here?
-                                </p>
-                                <button className="px-8 py-3 rounded-full bg-primary text-primary-foreground font-semibold hover:shadow-lg hover:shadow-primary/20 transition-all active:scale-95">
-                                    View Documentation
-                                </button>
-                            </motion.div>
+                             <div className="p-6 rounded-2xl bg-secondary/50 border border-border/60 flex items-center gap-6 group hover:bg-secondary transition-colors cursor-pointer">
+                                <div className="w-12 h-12 rounded-xl bg-primary flex items-center justify-center text-primary-foreground flex-shrink-0">
+                                    <MessageCircle size={24} />
+                                </div>
+                                <div>
+                                    <h4 className="font-bold text-primary">Still have questions?</h4>
+                                    <p className="text-sm text-muted-foreground">Our team of experts is ready to help you.</p>
+                                </div>
+                                <ArrowRight className="ml-auto text-primary/40 group-hover:text-primary transition-colors" size={20} />
+                            </div>
                         </div>
                     </div>
                 </div>

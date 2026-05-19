@@ -184,7 +184,7 @@ export default function HeroSection() {
           <div className="absolute inset-0 bg-gradient-to-l from-transparent via-transparent to-white/10" />
 
           <div className="relative z-10 h-full flex items-center">
-            <div className="max-w-7xl mx-auto px-4 py-20 sm:py-32 sm:px-6 w-full">
+            <div className="max-w-7xl mx-auto px-4 py-20 mt-60 sm:py-32 sm:px-6 w-full">
               <div className="max-w-4xl text-white">
 
                 <h1 className=" h-16 text-3xl md:text-7xl  font-display text-2xl font-light sm:text-4xl md:text-7xl md:font-black leading-tight mb-4 sm:mb-6">
@@ -195,13 +195,13 @@ export default function HeroSection() {
                 </p>
                 <div className="flex flex-col sm:flex-row flex-wrap gap-3">
                   <Link
-                    href="#programs"
+                    href="/innovation-fund"
                     className="bg-primary text-white hover:bg-primary/90 font-semibold px-6 sm:px-7 py-3 sm:py-3.5 rounded-full transition inline-flex items-center justify-center gap-2 text-sm sm:text-base"
                   >
                     Innovation Fund <ArrowRight className="w-4 h-4" />
                   </Link>
                   <Link
-                    href="#demo"
+                    href="/about"
                     className="border border-white/30 hover:bg-white/10 text-white font-semibold px-6 sm:px-7 py-3 sm:py-3.5 rounded-full transition inline-flex items-center justify-center gap-2 text-sm sm:text-base"
                   >
                     <Play className="w-4 h-4" /> About Us
