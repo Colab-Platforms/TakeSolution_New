@@ -46,7 +46,7 @@ const FOOTER_LINKS = [
     }
 ];
 
-const socialLinks = [
+const socialLinks: { name: string; href: string; icon: any; isSpecial?: boolean }[] = [
 
   { name: "Instagram", href: "#", icon: FaInstagram },
   { name: "LinkedIn", href: "#", icon: FaLinkedinIn },
