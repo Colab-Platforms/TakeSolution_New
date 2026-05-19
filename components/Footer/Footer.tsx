@@ -196,7 +196,7 @@ export const Footer = () => {
                 </div>
             </div>
 
-            {/* Huge Decorative Text */}
+            {/* Huge Decorative Text 1*/}
             <div className="absolute -bottom-10 left-1/2 -translate-x-1/2 text-[12vw] font-display font-bold text-white/[0.02] select-none pointer-events-none whitespace-nowrap">
                 TAKE SOLUTIONS
             </div>
