@@ -7,7 +7,7 @@ const AboutHero = () => {
   const { scrollY } = useScroll();
   const scale = useTransform(scrollY, [0, 2000], [1, 1.08]);
   return (
-    <section className="relative pt-5 pb-32 bg-[#F8F7F3] overflow-hidden">
+    <section className="relative pt-5 pb-30 bg-[#F8F7F3] overflow-hidden">
       <div className="container">
         {/* <div className="max-w-4xl mb-24">
           <motion.span 
@@ -27,12 +27,12 @@ const AboutHero = () => {
           </motion.h1>
         </div> */}
 
-        <div className="w-full h-px bg-border/40 max-w-4xl mx-auto mb-20" />
+        <div className="w-full h-px bg-border/40 max-w-4xl mx-auto mb-10" />
 
         {/* Bento Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-12 gap-6 h-auto md:h-[600px]">
+        <div className="grid grid-cols-1 md:grid-cols-12 gap-6 h-auto md:h-[650px]">
           {/* Left Column */}
-          <div className="md:col-span-3 flex flex-col gap-6 h-full">
+          <div className="md:col-span-3 row-span-2 flex flex-col gap-6 h-full">
             <motion.div
               initial={{ opacity: 0, x: -20 }}
               animate={{ opacity: 1, x: 0 }}
@@ -62,7 +62,7 @@ const AboutHero = () => {
             animate={{ opacity: 1, y: 0 }}
             style={{ scale }}
             transition={{ delay: 0.5 }}
-            className="md:col-span-5 relative rounded-[32px] overflow-hidden group min-h-[400px] md:min-h-0"
+            className="md:col-span-5 row-span-2 relative rounded-[32px] overflow-hidden group min-h-[400px] md:min-h-0"
           >
             <img src="/hero-grid-2.png" alt="Scientist" className="w-full h-full object-cover" />
             <div className="absolute inset-0 bg-black/20" />
@@ -78,7 +78,7 @@ const AboutHero = () => {
           </motion.div>
 
           {/* Right Column */}
-          <div className="md:col-span-4 flex flex-col gap-6 h-full">
+          <div className="md:col-span-4 row-span-2 flex flex-col gap-6 h-full">
             <motion.div
               initial={{ opacity: 0, x: 20 }}
               animate={{ opacity: 1, x: 0 }}
