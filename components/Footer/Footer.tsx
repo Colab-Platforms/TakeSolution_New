@@ -140,6 +140,23 @@ export const Footer = () => {
                         </div>
                     </div>
 
+                    <div className="flex col-span-2 md:flex-col items-center justify-center gap-4 w-full md:w-auto">
+                        {socialLinks.map((social, idx) => (
+                            <Link
+                                key={idx}
+                                href={social.href}
+                                aria-label={social.name}
+                                className={`w-12 h-12 rounded-full border flex items-center justify-center transition-all duration-300 ${
+                                    social.isSpecial
+                                        ? "bg-black border-white/20 text-white hover:bg-neutral-900 hover:border-white/40"
+                                        : "bg-white/5 border-white/10 text-white/60 hover:text-accent hover:border-accent hover:bg-accent/5"
+                                }`}
+                            >
+                                {typeof social.icon === "function" ? <social.icon /> : <social.icon size={18} />}
+                            </Link>
+                        ))}
+                    </div>
+
                     {/* Divider for mobile view only */}
                     <div className="block md:hidden col-span-2 border-t border-white/10 my-2"></div>
 
@@ -172,22 +189,7 @@ export const Footer = () => {
                         </div>
                     </div>
 
-                    <div className="flex items-center justify-center gap-4 w-full md:w-auto">
-                        {socialLinks.map((social, idx) => (
-                            <Link
-                                key={idx}
-                                href={social.href}
-                                aria-label={social.name}
-                                className={`w-12 h-12 rounded-full border flex items-center justify-center transition-all duration-300 ${
-                                    social.isSpecial
-                                        ? "bg-black border-white/20 text-white hover:bg-neutral-900 hover:border-white/40"
-                                        : "bg-white/5 border-white/10 text-white/60 hover:text-accent hover:border-accent hover:bg-accent/5"
-                                }`}
-                            >
-                                {typeof social.icon === "function" ? <social.icon /> : <social.icon size={18} />}
-                            </Link>
-                        ))}
-                    </div>
+                   
 
                     <div className="hidden md:flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10 text-[10px] font-bold text-white/60">
                         <Globe size={12} className="text-accent" />
