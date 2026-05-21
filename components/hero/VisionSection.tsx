@@ -78,7 +78,7 @@ export default function VisionSectionRevamp() {
               </span>
             </div>
 
-            <h1 className="text-[40px] sm:text-[54px] md:text-[92px] leading-[0.95] md:leading-[0.92] tracking-[-2px] md:tracking-[-6px] font-semibold max-w-5xl">
+            <h2 className="text-4xl sm:text-5xl md:text-8xl font-display font-semibold leading-[1.05] tracking-tight max-w-5xl">
               Creating
               <span className="italic font-light text-black/30">
                 {" "}
@@ -86,7 +86,7 @@ export default function VisionSectionRevamp() {
               </span>
               <br />
               healthcare systems for a more human future.
-            </h1>
+            </h2>
           </div>
 
           <div className="lg:pl-20 lg:border-l border-black/10">

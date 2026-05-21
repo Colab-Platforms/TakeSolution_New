@@ -1,5 +1,5 @@
 import { Metadata } from "next";
-import { Geist, Geist_Mono, Instrument_Serif } from "next/font/google";
+import { Geist, Geist_Mono, Instrument_Serif, Playfair_Display } from "next/font/google";
 import "./globals.css";
 import Navbar from "../components/Navbar";
 import Footer from "@/components/Footer/Footer";
@@ -20,6 +20,11 @@ const instrumentSerif = Instrument_Serif({
   subsets: ["latin"],
 });
 
+const playfair = Playfair_Display({
+  variable: "--font-playfair",
+  subsets: ["latin"],
+});
+
 
 
 export const metadata: Metadata = {
@@ -35,7 +40,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} ${instrumentSerif.variable} h-full antialiased`}
+      className={`${geistSans.variable} ${geistMono.variable} ${instrumentSerif.variable} ${playfair.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col bg-background text-foreground">
         <Navbar />

@@ -113,7 +113,7 @@ export const Footer = () => {
                                 </div>
                                 <div>
                                     <p className="text-[10px] text-white/40 uppercase font-bold tracking-widest">Email</p>
-                                    <p className="text-sm md:text-base font-semibold text-white break-all">contact@takesolutions.com</p>
+                                    <p className="text-sm md:text-base font-semibold text-white break-all">cs@takesolutions.com</p>
                                 </div>
                             </a>
                             <a href="tel:+1234567890" className="group flex items-center gap-4">
@@ -122,7 +122,7 @@ export const Footer = () => {
                                 </div>
                                 <div>
                                     <p className="text-[10px] text-white/40 uppercase font-bold tracking-widest">Phone</p>
-                                    <p className="text-sm md:text-base font-semibold text-white">+1 (234) 567-890</p>
+                                    <p className="text-sm md:text-base font-semibold text-white">+91 8108618322</p>
                                 </div>
                             </a>
                             <div className="group flex items-start gap-4">
@@ -132,8 +132,9 @@ export const Footer = () => {
                                 <div>
                                     <p className="text-[10px] text-white/40 uppercase font-bold tracking-widest">Headquarters</p>
                                     <p className="text-sm md:text-base font-semibold text-white leading-relaxed">
-                                        No: 59 A East Madison Street<br />
-                                        Baltimore, MD, USA, 4508
+                                    No. B3. No.9, B Block, Alsa Arcade, 3rd Floor, 2nd Avenue,<br />
+                                    Anna Nagar East, Chennai - 600102
+                                        
                                     </p>
                                 </div>
                             </div>
