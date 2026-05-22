@@ -88,7 +88,7 @@ export default function WhatWeDo() {
             >
               Healthcare
               <br />
-              <span className="text-accent">Intelligence</span>
+              <span className="text-black">Intelligence</span>
             </motion.h2>
           </div>
 
@@ -100,7 +100,7 @@ export default function WhatWeDo() {
             className="text-black/50 text-lg leading-relaxed max-w-xl"
           >
             We build deeply integrated systems for modern healthcare,
-            life-sciences, and pharmaceutical enterprises — combining
+            life-sciences, and pharmaceutical enterprises combining
             technology, compliance, and intelligent automation into one unified
             ecosystem.
           </motion.p>
@@ -139,7 +139,7 @@ export default function WhatWeDo() {
               </div>
 
               {/* Hover Arrow */}
-              <div className="absolute left-10 bottom-10 flex items-center gap-3 opacity-0 translate-y-5 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-500">
+              {/* <div className="absolute left-10 bottom-10 flex items-center gap-3 opacity-0 translate-y-5 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-500">
                 <span className="text-sm text-white/80 tracking-wide">
                   Explore
                 </span>
@@ -147,7 +147,7 @@ export default function WhatWeDo() {
                 <div className="w-8 h-8 rounded-full bg-white text-black flex items-center justify-center">
                   <ArrowUpRight className="w-4 h-4" />
                 </div>
-              </div>
+              </div> */}
 
               {/* Hover Gradient */}
               <div className="absolute inset-0 bg-gradient-to-br from-white/[0.03] to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />

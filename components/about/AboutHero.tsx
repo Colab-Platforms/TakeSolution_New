@@ -9,11 +9,11 @@ const AboutHero = () => {
   return (
     <section className="relative pt-5 pb-30 bg-[#F8F7F3] overflow-hidden">
       <div className="container">
-        {/* <div className="max-w-4xl mb-24">
+        <div className="max-w-4xl mb-24 mt-10">
           <motion.span 
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
-            className="text-[11px] font-bold tracking-[0.2em] text-[#7C5CFF] uppercase mb-6 block"
+            className="text-[11px] font-bold tracking-[0.25em] text-accent uppercase mb-6 block"
           >
             About Take Solutions
           </motion.span>
@@ -21,11 +21,11 @@ const AboutHero = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.1 }}
-            className="text-5xl md:text-6xl lg:text-7xl font-medium text-[#1A1F3D] leading-[1.1] tracking-tight"
+            className="text-5xl md:text-6xl lg:text-7xl font-display font-semibold text-primary leading-[1.1] tracking-tight"
           >
-            We are the ultimate strategic partner at the intersection of <span className="italic">science and technology</span>.
+            We are the ultimate strategic partner at the intersection of <span className="italic font-light">science and technology</span>.
           </motion.h1>
-        </div> */}
+        </div>
 
         <div className="w-full h-px bg-border/40 max-w-4xl mx-auto mb-10" />
 
@@ -49,9 +49,9 @@ const AboutHero = () => {
               transition={{ delay: 0.4 }}
               className="bg-[#DCE1EE] p-8 rounded-[32px] flex flex-col justify-center space-y-4 flex-1 min-h-[250px]"
             >
-              <h3 className="text-3xl font-display text-[#1A1F3D]">300+<br />Deliveries</h3>
+              <h3 className="text-3xl font-display text-primary">300+<br />Clinical Trials</h3>
               <p className="text-xs text-muted-foreground leading-relaxed">
-                Join countless satisfied customers who've relied on our consistent, expert deliveries.
+                Empowering global researchers with highly reliable, automated clinical trials and study deployments.
               </p>
             </motion.div>
           </div>
@@ -69,10 +69,10 @@ const AboutHero = () => {
             <div className="absolute inset-0 p-10 flex flex-col justify-between text-white">
               <div className="space-y-1">
                 <div className="text-4xl font-display">98%</div>
-                <div className="text-xl font-medium">On-Time Rate</div>
+                <div className="text-xl font-medium">Trial Accuracy</div>
               </div>
               <p className="text-sm opacity-90 max-w-[240px] leading-relaxed">
-                You can rely on us to keep your operations running smoothly without delays.
+                Leveraging next-generation AI platforms to analyze complex data sets without delays.
               </p>
             </div>
           </motion.div>
@@ -86,11 +86,11 @@ const AboutHero = () => {
               className="bg-[#E5DFD9] p-8 rounded-[32px] flex flex-col justify-center space-y-4 flex-1 min-h-[250px]"
             >
               <p className="text-xs text-[#5D5750] leading-relaxed">
-                Our unwavering quality ensures you receive top-purity solutions, always meeting your standards.
+                Our unwavering quality ensures you receive top-purity solutions, always meeting your scientific standards.
               </p>
               <div className="pt-2">
-                <div className="text-3xl font-display text-[#1A1F3D]">99.8%</div>
-                <div className="text-lg font-medium text-[#1A1F3D]">Product Purity</div>
+                <div className="text-3xl font-display text-primary">99.8%</div>
+                <div className="text-lg font-medium text-primary">Product Purity</div>
               </div>
             </motion.div>
 
@@ -111,3 +111,4 @@ const AboutHero = () => {
 }
 
 export default AboutHero
+

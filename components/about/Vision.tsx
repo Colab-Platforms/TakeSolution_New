@@ -13,7 +13,7 @@ const visionPoints = [
 
 export default function Vision() {
   return (
-    <section className="py-24 bg-[#f7f5f1] overflow-hidden">
+    <section className="py-24 bg-[#000000] overflow-hidden">
       <div className="container mx-auto px-6">
         <div className="flex flex-col lg:flex-row-reverse items-center gap-16 lg:gap-24">
           {/* IMAGE COLLAGE RIGHT */}
@@ -40,7 +40,7 @@ export default function Vision() {
                 whileInView={{ opacity: 1, scale: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: 0.3, duration: 0.8 }}
-                className="absolute top-[10%] -left-4 md:-left-16 w-1/3 aspect-square rounded-[20px] md:rounded-[30px] overflow-hidden border-4 md:border-8 border-white shadow-2xl"
+                className="absolute top-[10%] -left-4 md:-left-16 w-1/3 aspect-square rounded-[20px] md:rounded-[30px] overflow-hidden border-4 md:border-8 border-black shadow-2xl"
               >
                 <img
                   src="https://images.unsplash.com/photo-1582719471384-894fbb16e074?auto=format&fit=crop&q=80&w=400"
@@ -59,10 +59,10 @@ export default function Vision() {
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
             >
-              <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mb-8">
+              <h2 className="text-4xl md:text-5xl font-bold text-white mb-8">
                 Our Vision
               </h2>
-              <p className="text-lg text-slate-600 leading-relaxed mb-10">
+              <p className="text-lg text-white leading-relaxed mb-10">
                 To transform global healthcare through artificial intelligence 
                 and intelligent digital innovation. We envision a world where 
                 technology eliminates barriers to quality healthcare, creating 
@@ -83,7 +83,7 @@ export default function Vision() {
                     <div className="flex-shrink-0 w-6 h-6 rounded-full bg-blue-100 flex items-center justify-center text-blue-600">
                       <Check className="w-4 h-4" />
                     </div>
-                    <span className="text-slate-700 font-medium">{point}</span>
+                    <span className="text-white font-medium">{point}</span>
                   </motion.div>
                 ))}
               </div>

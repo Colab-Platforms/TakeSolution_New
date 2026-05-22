@@ -3,38 +3,38 @@
 const testimonials = [
     {
         name: "Olivia Brown",
-        role: "Enviro Lead",
-        company: "Eco Supply",
+        role: "Clinical Operations Director",
+        company: "Astra Genomics",
         avatar: "https://i.pravatar.cc/100?img=1",
-        text: "It’s inspiring to work with a logistics partner that shares our mission and passion for a cleaner and greener planet.",
+        text: "It’s inspiring to work with a technology partner that shares our mission of accelerating breakthrough clinical trials using AI.",
     },
     {
         name: "David Lee",
-        role: "Supply Chain Head",
-        company: "Eco Supply",
+        role: "Data Science Lead",
+        company: "BioPharma Solutions",
         avatar: "https://i.pravatar.cc/100?img=2",
-        text: "Eco-Supply delivers efficiency and sustainability together, ensuring performance that aligns with our green vision.",
+        text: "Their platform delivers safety and analytical power together, ensuring research tracking that aligns with our scientific vision.",
     },
     {
         name: "Noah Brooks",
-        role: "Operations Director",
-        company: "GreenFlow",
+        role: "Head of Preventive Care",
+        company: "GreenHealth Group",
         avatar: "https://i.pravatar.cc/100?img=3",
-        text: "They helped us transition to cleaner logistics without compromising speed or reliability.",
+        text: "They helped us transition to automated patient screening systems without compromising security or regulatory integrity.",
     },
     {
         name: "Emma Carter",
-        role: "Logistics Manager",
-        company: "Eco Supply",
+        role: "Pharmacovigilance Manager",
+        company: "Nova Therapeutics",
         avatar: "https://i.pravatar.cc/100?img=4",
-        text: "Eco-Supply cut our logistics emissions while keeping delivery times consistent.",
+        text: "Their digital intelligence cut our safety signal detection timeline while keeping compliance perfectly consistent.",
     },
     {
         name: "Ethan Wilson",
-        role: "Supply Head",
-        company: "GreenChain",
+        role: "Chief Scientific Officer",
+        company: "GenTech Labs",
         avatar: "https://i.pravatar.cc/100?img=5",
-        text: "Highly recommend Eco-Supply for businesses focused on cutting emissions and driving true sustainability.",
+        text: "Highly recommend their clinical analytics suite for any life science organization focused on reducing drug discovery cycles.",
     },
 ];
 
@@ -53,10 +53,10 @@ export default function TestimonialSection() {
             </div>
 
             <div className="absolute inset-0 self-stretch inline-flex flex-col justify-start items-center pt-24 md:pt-40 px-4">
-                <div className="text-center justify-center">
-                    <span className="text-gray-400 text-3xl md:text-5xl font-medium font-['Oswald'] leading-tight md:leading-10">Driving Success Across</span>
-                    <span className="text-white text-3xl md:text-5xl font-medium font-['Oswald'] leading-tight md:leading-10"> Life Sciences</span>
-                </div>
+                <h2 className="text-center font-display text-3xl md:text-5xl font-medium leading-tight md:leading-10">
+                    <span className="text-gray-400">Driving Success Across</span>
+                    <span className="text-white"> Life Sciences</span>
+                </h2>
             </div>
 
             {/* Testimonials Row */}
