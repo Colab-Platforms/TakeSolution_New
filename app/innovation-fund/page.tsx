@@ -1,14 +1,14 @@
 import React from 'react'
-import InnovationFundContent from '../../components/InnovationFundContent'
+import InnovationFundContent from '../../components/innovation-fund/InnovationFundContent'
+import InvestmentProcess from '../../components/innovation-fund/InvestmentProcess'
 
 const InnovationFundPage = () => {
-    return (
-        <div>
-
-            <InnovationFundContent />
-        </div>
-
-    )
+  return (
+    <main>
+      <InnovationFundContent />
+      <InvestmentProcess />
+    </main>
+  )
 }
 
 export default InnovationFundPage

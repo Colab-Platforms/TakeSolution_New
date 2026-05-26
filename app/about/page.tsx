@@ -1,10 +1,10 @@
-import React from 'react'
 import { Metadata } from 'next'
 import AboutHero from '@/components/about/AboutHero'
-import Vision from '@/components/about/Vision'
-import Mission from '@/components/about/Mission'
+import AboutStory from '@/components/about/AboutStory'
+import AboutMissionVision from '@/components/about/AboutMissionVision'
 import WhatWeDo from '@/components/about/WhatWeDo'
-import TestimonialSection from "@/components/hero/TestimonialSection";
+import AISection from '@/components/about/AISection'
+import AboutCTA from '@/components/about/Aboutcta'
 
 export const metadata: Metadata = {
   title: "About Us | Take Solutions Limited",
@@ -15,10 +15,11 @@ const AboutPage = () => {
   return (
     <div className="flex flex-col w-full">
       <AboutHero />
-      <Mission />
-      <Vision />
-      <WhatWeDo />
-      <TestimonialSection />
+      <AboutStory />
+      <AboutMissionVision />
+      {/* <WhatWeDo /> */}
+      <AISection />   
+      <AboutCTA />
     </div>
   )
 }

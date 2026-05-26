@@ -41,7 +41,7 @@ const features = [
 
 export default function ShowcaseSection() {
     return (
-        <section className="w-full bg-[#f5f5f3] py-24 px-4 overflow-hidden">
+        <section className="w-full bg-[#f8f8f4] py-24 px-4 overflow-hidden">
 
             <div className="max-w-6xl mx-auto">
 

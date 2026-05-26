@@ -9,6 +9,7 @@ import {
   Rocket,
   Sparkles,
 } from "lucide-react";
+import ApplicationForm from "./ApplicationForm";
 
 const focusAreas = [
   {
@@ -154,60 +155,7 @@ export default function InnovationFundContent() {
             </div>
 
             {/* RIGHT FORM */}
-            <div className="p-10 md:p-16">
-              <form className="space-y-8">
-                <div className="grid md:grid-cols-2 gap-6">
-                  <Input label="Full Name" placeholder="John Doe" />
-                  <Input label="Email Address" placeholder="john@company.com" />
-                </div>
-
-                <Input
-                  label="Company Name"
-                  placeholder="Biotech Solutions Inc."
-                />
-
-                <Input
-                  label="Company Website"
-                  placeholder="https://yourcompany.com"
-                />
-
-                <div>
-                  <label className="text-sm text-black/40 mb-3 block">
-                    Focus Area
-                  </label>
-
-                  <select className="w-full bg-transparent border-b border-black/15 pb-4 text-black placeholder:text-black outline-none focus:border-black transition-colors">
-                    <option className="bg-white text-black">AI Discovery</option>
-                    <option className="bg-white text-black">Precision Medicine</option>
-                    <option className="bg-white text-black">Digital Health</option>
-                    <option className="bg-white text-black">Other</option>
-                  </select>
-                </div>
-
-                <div>
-                  <label className="text-sm text-black/40 mb-3 block">
-                    Your Innovation
-                  </label>
-
-                  <textarea
-                    rows={5}
-                    placeholder="Describe your technology, scientific breakthrough, and impact..."
-                    className="w-full bg-transparent border-b border-black/15 pb-4 text-black placeholder:text-white/25 outline-none resize-none focus:border-black transition-colors"
-                  />
-                </div>
-
-                <button
-                  type="submit"
-                  className="group mt-8 inline-flex items-center gap-4 rounded-full bg-white text-black px-8 py-4 text-sm font-medium hover:pl-10 transition-all duration-300"
-                >
-                  Submit Application
-
-                  <div className="w-8 h-8 rounded-full bg-black text-white flex items-center justify-center">
-                    <ArrowUpRight className="w-4 h-4 group-hover:rotate-45 transition-transform duration-300" />
-                  </div>
-                </button>
-              </form>
-            </div>
+            <ApplicationForm />
           </div>
         </div>
       </div>

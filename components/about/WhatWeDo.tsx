@@ -1,160 +1,157 @@
-"use client";
+"use client"
 
-import React from "react";
-import { motion } from "framer-motion";
-import {
-  Beaker,
-  Truck,
-  Cpu,
-  FileText,
-  HeartPulse,
-  Database,
-  ArrowUpRight,
-} from "lucide-react";
+import { useRef } from "react"
+import { motion, useInView } from "framer-motion"
+import { Layers } from "lucide-react"
 
-const capabilities = [
-  {
-    title: "Life Sciences",
-    description:
-      "Digital transformation solutions for biotech, healthcare, and research organizations.",
-    icon: <Beaker className="w-5 h-5" />,
-    number: "01",
-  },
-  {
-    title: "Supply Chain",
-    description:
-      "Intelligent logistics ecosystems designed for speed, compliance, and scalability.",
-    icon: <Truck className="w-5 h-5" />,
-    number: "02",
-  },
-  {
-    title: "AI & Analytics",
-    description:
-      "Enterprise-grade AI systems delivering predictive intelligence and automation.",
-    icon: <Cpu className="w-5 h-5" />,
-    number: "03",
-  },
-  {
-    title: "Regulatory Affairs",
-    description:
-      "Streamlined regulatory workflows and global compliance infrastructure.",
-    icon: <FileText className="w-5 h-5" />,
-    number: "04",
-  },
-  {
-    title: "Pharmacovigilance",
-    description:
-      "Advanced patient safety monitoring with real-time signal detection.",
-    icon: <HeartPulse className="w-5 h-5" />,
-    number: "05",
-  },
-  {
-    title: "Clinical Data",
-    description:
-      "Modern clinical data platforms with integrity, governance, and AI assistance.",
-    icon: <Database className="w-5 h-5" />,
-    number: "06",
-  },
-];
+type ServiceVariant = "legacy" | "healthtech"
 
-export default function WhatWeDo() {
+type Service = {
+  num: string
+  icon: React.ReactNode
+  iconVariant: "blue" | "indigo" | "cyan"
+  name: string
+  description: string
+  variant: ServiceVariant
+}
+
+const services: Service[] = [
+  {
+    num: "01",
+    icon: <span className="text-2xl">🔬</span>,
+    iconVariant: "blue",
+    name: "Healthcare Research",
+    description: "Comprehensive research and strategic analysis for healthcare brands — from clinical trial insights and safety studies to competitive intelligence.",
+    variant: "legacy",
+  },
+  {
+    num: "02",
+    icon: <span className="text-2xl">📊</span>,
+    iconVariant: "blue",
+    name: "Clinical Analytics",
+    description: "Deep analytical frameworks that transform raw clinical data into structured, decision-ready intelligence — built for pharma and biotech.",
+    variant: "legacy",
+  },
+  {
+    num: "03",
+    icon: <span className="text-2xl">🛡️</span>,
+    iconVariant: "indigo",
+    name: "Pharmacovigilance",
+    description: "Systematic monitoring and reporting of adverse events and drug safety signals, ensuring continuous regulatory compliance with speed.",
+    variant: "legacy",
+  },
+  {
+    num: "04",
+    icon: <span className="text-2xl">🤖</span>,
+    iconVariant: "cyan",
+    name: "AI Diagnostics",
+    description: "Developing intelligent diagnostic assistance tools trained on healthcare-domain datasets — augmenting clinical decision-making.",
+    variant: "healthtech",
+  },
+  {
+    num: "05",
+    icon: <span className="text-2xl">⚡</span>,
+    iconVariant: "cyan",
+    name: "Predictive Health AI",
+    description: "Machine learning models that surface early clinical signals, forecast patient outcomes, and compress time-to-treatment.",
+    variant: "healthtech",
+  },
+  {
+    num: "06",
+    icon: <span className="text-2xl">🌐</span>,
+    iconVariant: "cyan",
+    name: "HealthTech Integration",
+    description: "End-to-end integration of AI platforms into existing healthcare workflows — connecting clinical data and EHR systems.",
+    variant: "healthtech",
+  },
+]
+
+const iconVariantClass: Record<Service["iconVariant"], string> = {
+  blue:   "bg-blue-500/10 text-blue-600 border border-blue-200",
+  indigo: "bg-indigo-500/10 text-indigo-600 border border-indigo-200",
+  cyan:   "bg-cyan-500/10 text-cyan-600 border border-cyan-200",
+}
+
+const tagVariantClass: Record<ServiceVariant, string> = {
+  legacy:     "bg-indigo-50 text-indigo-700 border border-indigo-200",
+  healthtech: "bg-cyan-50 text-cyan-700 border border-cyan-200",
+}
+
+const tagLabel: Record<ServiceVariant, string> = {
+  legacy:     "Life Sciences Legacy",
+  healthtech: "HealthcareTech",
+}
+
+const ServiceCard = ({ service, index }: { service: Service; index: number }) => {
+  const ref = useRef(null)
+  const inView = useInView(ref, { once: true, margin: "-50px" })
+
   return (
-    <section className="relative bg-[#f7f5f1] py-32 overflow-hidden">
-      {/* Background */}
-      <div className="absolute inset-0">
-        <div className="absolute left-0 top-0 h-full w-[1px] bg-black/5 ml-[8%]" />
-        <div className="absolute right-0 top-0 h-full w-[1px] bg-black/5 mr-[8%]" />
+    <motion.div
+      ref={ref}
+      initial={{ opacity: 0, y: 24 }}
+      animate={inView ? { opacity: 1, y: 0 } : {}}
+      transition={{ duration: 0.55, ease: "easeOut", delay: index * 0.07 }}
+      className="relative px-8 py-10 transition-colors duration-300 hover:bg-slate-50 bg-white group"
+    >
+      <div className="font-mono text-[11px] tracking-[0.14em] text-black/30 mb-6">
+        {service.num}
       </div>
 
-      <div className="max-w-7xl mx-auto px-6 relative z-10">
-        {/* Header */}
-        <div className="grid lg:grid-cols-2 gap-16 items-end mb-24">
+      <div className={`w-[52px] h-[52px] flex items-center justify-center rounded-[16px] mb-6 transition-transform duration-300 group-hover:scale-110 origin-left ${iconVariantClass[service.iconVariant]}`}>
+        {service.icon}
+      </div>
+
+      <h3 className="text-[20px] font-semibold text-[#111111] tracking-tight mb-3">
+        {service.name}
+      </h3>
+
+      <p className="text-[15px] font-light leading-[1.7] text-black/60">
+        {service.description}
+      </p>
+
+      <span className={`inline-block mt-[24px] font-mono text-[10px] font-semibold tracking-[0.12em] uppercase px-3 py-1.5 rounded-full ${tagVariantClass[service.variant]}`}>
+        {tagLabel[service.variant]}
+      </span>
+    </motion.div>
+  )
+}
+
+const AboutWhatWeDo = () => (
+  <section id="services" className="relative overflow-hidden bg-[#f5f7fb] px-4 pb-4 md:px-6 lg:px-8">
+    <div className="relative mx-auto w-full overflow-hidden rounded-[40px] border border-black/5 bg-white shadow-[0_20px_80px_rgba(0,0,0,0.04)] pb-8">
+      
+      <div className="max-w-[1500px] mx-auto px-6 py-24">
+        {/* Intro */}
+        <div className="grid lg:grid-cols-[1fr_1fr] gap-12 lg:gap-20 mb-20 items-end">
           <div>
-            <motion.span
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              className="inline-block text-[11px] tracking-[0.35em] uppercase text-black/40 mb-6"
-            >
+            <div className="inline-flex items-center gap-3 px-5 py-3 rounded-full border border-blue-400/20 bg-blue-500/10 text-blue-700 text-sm font-medium tracking-wide mb-8">
+              <Layers className="w-4 h-4" />
               What We Do
-            </motion.span>
-
-            <motion.h2
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
-              className="mb-0"
-            >
-              Healthcare
+            </div>
+            <h2 className="font-display font-semibold tracking-tight text-[#111111] text-[clamp(40px,5vw,56px)] leading-[1.05]">
+              Two Pillars.
               <br />
-              <span className="text-black">Intelligence</span>
-            </motion.h2>
+              <em className="italic font-light text-black/30">One Purpose.</em>
+            </h2>
           </div>
-
-          <motion.p
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ delay: 0.1 }}
-            className="text-black/50 text-lg leading-relaxed max-w-xl"
-          >
-            We build deeply integrated systems for modern healthcare,
-            life-sciences, and pharmaceutical enterprises combining
-            technology, compliance, and intelligent automation into one unified
-            ecosystem.
-          </motion.p>
+          <p className="text-[18px] leading-[1.8] text-[#111111]/60 lg:pl-12 lg:border-l border-black/10">
+            Our practice spans deep-rooted Life Sciences research capabilities and an emerging
+            HealthcareTech portfolio — each reinforcing the other, unified by an unwavering
+            commitment to clinical accuracy and real-world impact.
+          </p>
         </div>
 
-        {/* Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 border border-black/10">
-          {capabilities.map((item, idx) => (
-            <motion.div
-              key={idx}
-              initial={{ opacity: 0, y: 60 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: idx * 0.08 }}
-              className="group relative min-h-[340px] border-b border-r border-black/10 p-10 bg-transparent hover:bg-black transition-all duration-500"
-            >
-              {/* Number */}
-              <span className="absolute top-8 right-8 text-[12px] tracking-[0.2em] text-black/30 group-hover:text-white/30 transition-colors duration-500">
-                {item.number}
-              </span>
-
-              {/* Icon */}
-              <div className="w-12 h-12 rounded-full border border-black/10 flex items-center justify-center text-black group-hover:text-white group-hover:border-white/20 transition-all duration-500">
-                {item.icon}
-              </div>
-
-              {/* Content */}
-              <div className="mt-20">
-                <h3 className="text-3xl tracking-[-0.04em] font-semibold text-black group-hover:text-white transition-colors duration-500">
-                  {item.title}
-                </h3>
-
-                <p className="mt-5 text-black/50 leading-relaxed text-[15px] group-hover:text-white/60 transition-colors duration-500 max-w-[280px]">
-                  {item.description}
-                </p>
-              </div>
-
-              {/* Hover Arrow */}
-              {/* <div className="absolute left-10 bottom-10 flex items-center gap-3 opacity-0 translate-y-5 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-500">
-                <span className="text-sm text-white/80 tracking-wide">
-                  Explore
-                </span>
-
-                <div className="w-8 h-8 rounded-full bg-white text-black flex items-center justify-center">
-                  <ArrowUpRight className="w-4 h-4" />
-                </div>
-              </div> */}
-
-              {/* Hover Gradient */}
-              <div className="absolute inset-0 bg-gradient-to-br from-white/[0.03] to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
-            </motion.div>
+        {/* Grid Container */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-px bg-black/5 rounded-[32px] overflow-hidden border border-black/5">
+          {services.map((service, i) => (
+            <ServiceCard key={service.num} service={service} index={i} />
           ))}
         </div>
       </div>
-    </section>
-  );
-}
+
+    </div>
+  </section>
+)
+
+export default AboutWhatWeDo
