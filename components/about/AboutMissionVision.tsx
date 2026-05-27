@@ -102,11 +102,6 @@ export default function AboutMissionVision() {
                   />
                 </div>
 
-                {/* Floating Element Element */}
-                <div className="absolute top-8 right-8 text-white text-5xl md:text-6xl z-20 opacity-30 transition-all duration-500 group-hover:scale-110 group-hover:opacity-60">
-                  {item.icon}
-                </div>
-
                 {/* Main Content */}
                 <div className="relative z-20 flex flex-col justify-between h-full p-8 md:p-10 text-white">
                   {/* Top */}
