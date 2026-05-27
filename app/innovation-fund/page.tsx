@@ -1,12 +1,22 @@
 import React from 'react'
-import InnovationFundContent from '../../components/innovation-fund/InnovationFundContent'
-import InvestmentProcess from '../../components/innovation-fund/InvestmentProcess'
+import HeroSection from '../../components/innovation-fund/HeroSection'
+import IntroSection from '../../components/innovation-fund/IntroSection'
+import FocusAreasSection from '../../components/innovation-fund/FocusAreaSection'
+import InvestmentApproachSection from '../../components/innovation-fund/InvestmentApproachSection'
+import EligibilitySection from '../../components/innovation-fund/EligibilitySection'
+import ApplicationSection from '../../components/innovation-fund/ApplicationSection'
+import CTASection from '../../components/innovation-fund/CTASection'
 
 const InnovationFundPage = () => {
   return (
     <main>
-      <InnovationFundContent />
-      <InvestmentProcess />
+      <HeroSection />
+      <IntroSection />
+      <FocusAreasSection />
+      <InvestmentApproachSection />
+      <EligibilitySection />
+      <ApplicationSection />
+      <CTASection />
     </main>
   )
 }

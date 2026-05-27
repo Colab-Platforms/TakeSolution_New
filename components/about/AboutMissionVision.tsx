@@ -13,7 +13,7 @@ const data = [
     image:
       "https://images.unsplash.com/photo-1551288049-bbbda536ad89?auto=format&fit=crop&q=80",
     tags: ["Research Integrity", "Real-Time AI", "Evidence-Based"],
-    icon: "🎯",
+   
   },
   {
     id: "vision",
@@ -23,7 +23,7 @@ const data = [
     image:
       "https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?auto=format&fit=crop&q=80",
     tags: ["AI Ecosystem", "Legacy × Tech", "Global Shift"],
-    icon: "🔭",
+   
   },
 ];
 
