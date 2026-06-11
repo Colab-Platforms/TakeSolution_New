@@ -12,9 +12,6 @@ import Projects from "@/components/hero/Projects";
 import VisionSection from "@/components/hero/VisionSection";
 import TestimonialSection from "@/components/hero/TestimonialSection";
 
-
-
-
 export default function Home() {
   return (
     <div className="flex flex-col flex-1 bg-transparent">

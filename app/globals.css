@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Onest:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
 @import "tailwindcss";
 
 @layer base {
@@ -95,11 +97,14 @@
   --color-border: hsl(var(--border));
   --color-input: hsl(var(--input));
   --color-ring: hsl(var(--ring));
+  --color-landing-primary: #6dacff;
 
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
   --font-serif: var(--font-instrument-serif);
   --font-display: var(--font-playfair);
+  --font-landing-title: "Onest", sans-serif;
+  --font-landing-body: "Raleway", sans-serif;
 
   --radius-xl: var(--radius);
 }
@@ -115,23 +120,6 @@
     @apply antialiased font-sans;
   }
 
-  /* Automated Heading Typography */
-  h1, h2, h3, h4 {
-    @apply font-display font-bold tracking-tight;
-  }
-
-  h1 { @apply text-5xl md:text-7xl leading-[1.1]; }
-  h2 { @apply text-4xl md:text-6xl leading-[1.15]; }
-  h3 { @apply text-2xl md:text-3xl; }
-
-  .container {
-    @apply mx-auto px-6 max-w-7xl;
-  }
-
-  /* Standardizing section headers */
-  section {
-    @apply py-20 lg:py-32;
-  }
 }
 
 @layer utilities {
@@ -194,4 +182,38 @@
 
 .pause-on-hover:hover {
   animation-play-state: paused;
+}
+
+.high-title-left{
+  position: relative;
+}
+
+.high-title-left::after {
+  content: "";
+  background-image: linear-gradient(-90deg, #c2dcff, transparent);
+  height: 60px;
+  width: 70%;
+  display: block;
+  position: absolute;
+  bottom: 0px;
+  right: 8%;
+  z-index: -1;
+  border-radius: 6px;
+}
+
+.high-title-center{
+  position: relative;
+}
+
+.high-title-center::after {
+  content: "";
+  background-image: linear-gradient(-90deg, #c2dcff, transparent);
+  height: 60px;
+  width: 70%;
+  display: block;
+  position: absolute;
+  bottom: 0px;
+  right: -5%;
+  z-index: -1;
+  border-radius: 6px;
 }
